@@ -46,18 +46,19 @@ text-align: center;
 } */
 
 .container {
-    position: relative;
+    position: relative; /* Ensure relative positioning for absolute positioning inside */
 }
 
 .logo-main {
-    text-align: center; /* Center align text inside .logo-main */
+    position: relative; /* Ensure relative positioning for absolute positioning inside */
+    /* text-align: center; */
 }
 
 .logo-image {
-    max-width: 100%; /* Adjusts image to be responsive */
+    max-width: 50%; /* Decrease the size of the logo image */
     height: auto;
     display: block;
-    margin: 0 auto;
+    margin: 0 auto; /* Center align the image */
 }
 
 .logo-text {
@@ -66,31 +67,18 @@ text-align: center;
     left: 50%;
     transform: translate(-50%, -50%);
     text-align: center;
-    background-color: rgba(0, 0, 0, 0.7);
-    padding: 20px; /* Adjust padding for smaller screens */
-    width: 80%; /* Adjusted width for smaller screens */
-    max-width: 500px; /* Maximum width for larger screens */
-    box-sizing: border-box;
+    background-color: rgba(0, 0, 0, 0.7); /* Transparent white background */
+    padding: 267px; /* Increased padding around the text */
+    width: 100%; /* Increased width of the background */
+    max-width: 100%; /* Maximum width to prevent excessive stretching */
+    box-sizing: border-box; /* Include padding in the width calculation */
 }
 
 .logo-text h2,
 .logo-text p {
     margin: 0;
-    font-size: 2rem; /* Adjust font size for smaller screens */
-    color: white;
-}
-
-/* Media Query for responsiveness */
-@media (max-width: 768px) {
-    .logo-text {
-        padding: 10px; /* Decrease padding for smaller screens */
-        width: 90%; /* Adjusted width for smaller screens */
-    }
-
-    .logo-text h2,
-    .logo-text p {
-        font-size: 1.5rem; /* Adjust font size for smaller screens */
-    }
+    font-size: 2.5rem; /* Adjust as needed */
+    color: hsl(0, 0%, 100%); /* Text color */
 }
 
 
@@ -259,4 +247,21 @@ header {
 .nav-links a:hover {
     background-color: #575757;
     border-radius: 5px;
+}
+
+.menu-icon {
+    display: none; /* Hide the icon by default on larger screens */
+    cursor: pointer;
+}
+
+.bar {
+    width: 25px;
+    height: 3px;
+    background-color: #333; /* Customize the color */
+    margin: 4px 0;
+}
+@media screen and (max-width: 768px) {
+    .menu-icon {
+        display: block;
+    }
 }

@@ -13,7 +13,7 @@
         <nav>
             <div class="nav-container">
                 <div class="logo">
-                    <img src="pics/logo.jpeg" style="width: 50px;" alt="Logo">
+                    <img src="pics/logo.jpeg" alt="Logo">
                     <div>
                         <h1 class="header-title">
                             ARK CERAMICS
@@ -24,12 +24,10 @@
 
                 <!-- Hamburger Menu Icon -->
                 <div class="menu-icon" onclick="toggleMenu()">
-                    <div class="bar"><a href="#about">ABOUT</a></div>
-                    <div class="bar"><a href="#gallery">GALLERY</a></div>
-                    <div class="bar"><a href="#tiles">TILES</a></div>
-                    <div class="bar"><a href="#contact">CONTACT</a></div>
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                    <div class="bar"></div>
                 </div>
-                
 
                 <ul class="nav-links" id="navLinks">
                     <li><a href="#about">ABOUT</a></li>
@@ -62,13 +60,13 @@
 
         <div class="slideshow-container">
             <div class="mySlides fade">
-                <img src="pics/images (1).jpg" style="width:50%">
+                <img src="pics/images (1).jpg" alt="Ceramic Image 1">
             </div>
             <div class="mySlides fade">
-                <img src="pics/images (2).jpg" style="width:50%">
+                <img src="pics/images (2).jpg" alt="Ceramic Image 2">
             </div>
             <div class="mySlides fade">
-                <img src="pics/pic2.jpg" style="width:50%">
+                <img src="pics/pic2.jpg" alt="Ceramic Image 3">
             </div>
         </div>
 
@@ -112,21 +110,11 @@
             }
             slideIndex++;
             if (slideIndex > slides.length) {
-                slideIndex = 1
+                slideIndex = 1;
             }
             slides[slideIndex - 1].style.display = "block";
             setTimeout(showSlides, 2000); // Change image every 2 seconds
         }
-
-
-        // Assuming you have an element with the ID "navLinks" for your navigation links
-const navLinks = document.getElementById('navLinks');
-
-function toggleMenu() {
-    // Toggle the "active" class on the navigation links container
-    navLinks.classList.toggle('active');
-}
-
     </script>
 </body>
 

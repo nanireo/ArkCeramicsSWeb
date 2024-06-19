@@ -10,6 +10,8 @@ header {
     background-color: #333;
     color: #ffffff;
     padding: 10px 0;
+    position: relative;
+    z-index: 1000; /* Ensure the header is above other content */
 }
 
 .nav-container {
@@ -21,70 +23,29 @@ header {
     padding: 0 20px;
 }
 
-
 .logo {
-    /* text-align: center; */
-    font-size: 2rem; /* Adjust as needed */
-    line-height: 1; /* Set line-height to 1 to remove spacing */
+    display: flex;
+    align-items: center;
+    z-index: 1001; /* Ensure the logo is above the menu */
+}
+
+.logo img {
+    width: 50px;
+    margin-right: 10px;
+}
+
+.header-title {
+    margin: 0;
+    font-size: 1.5rem;
+    line-height: 1;
 }
 
 .sub-text {
-    font-size: 1rem; /* Larger font size for the sub-text */
-    color: #868686; /* Example color */
-    display: block; /* Ensures each line is on its own line */
-}
-
-
-/* .logo {
-    font-size: 24px;
-    font-weight: bold;
-} */
-/* .logo-main{
-background-color: #ffffff;
-text-align: center;
-
-} */
-
-.container {
-    position: relative; /* Ensure relative positioning for absolute positioning inside */
-}
-
-.logo-main {
-    position: relative; /* Ensure relative positioning for absolute positioning inside */
-    /* text-align: center; */
-}
-
-.logo-image {
-    max-width: 50%; /* Decrease the size of the logo image */
-    height: auto;
+    font-size: 0.8rem;
+    color: #868686;
     display: block;
-    margin: 0 auto; /* Center align the image */
+    margin-top: 5px;
 }
-
-.logo-text {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    text-align: center;
-    background-color: rgba(0, 0, 0, 0.7); /* Transparent white background */
-    padding: 267px; /* Increased padding around the text */
-    width: 100%; /* Increased width of the background */
-    max-width: 100%; /* Maximum width to prevent excessive stretching */
-    box-sizing: border-box; /* Include padding in the width calculation */
-}
-
-.logo-text h2,
-.logo-text p {
-    margin: 0;
-    font-size: 2.5rem; /* Adjust as needed */
-    color: hsl(0, 0%, 100%); /* Text color */
-}
-
-
-
-
-/* //logo// */
 
 .nav-links {
     list-style: none;
@@ -109,6 +70,79 @@ text-align: center;
 .nav-links a:hover {
     background-color: #575757;
     border-radius: 5px;
+}
+
+.menu-icon {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    z-index: 1001; /* Ensure the menu icon is above the menu */
+}
+
+.bar {
+    width: 25px;
+    height: 3px;
+    background-color: #ffd900;
+    margin: 4px 0;
+}
+
+@media screen and (max-width: 768px) {
+    .menu-icon {
+        display: flex;
+    }
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
+        background-color: #333;
+        position: absolute;
+        top: 50px;
+        left: 0;
+        padding: 10px 0;
+        z-index: 1000;
+    }
+    .nav-links.active {
+        display: flex;
+    }
+    .nav-links li {
+        display: block;
+        margin: 10px 0;
+    }
+}
+
+.container {
+    position: relative;
+}
+
+.logo-main {
+    position: relative;
+}
+
+.logo-image {
+    max-width: 50%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+.logo-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 20px;
+    width: 80%;
+    box-sizing: border-box;
+}
+
+.logo-text h2,
+.logo-text p {
+    margin: 0;
+    font-size: 2.5rem;
+    color: #fff;
 }
 
 .spacer {
@@ -160,13 +194,13 @@ footer {
 
 .mySlides {
     display: none;
-    animation: fadeEffect 1s; /* Animation duration */
+    animation: fadeEffect 1s;
 }
 
 .mySlides img {
-    width: 100%; /* Ensure images fill their container */
+    width: 100%;
     display: block;
-    margin: auto; /* Center align images */
+    margin: auto;
 }
 
 /* Define keyframes for fade effect */
@@ -176,92 +210,5 @@ footer {
     }
     to {
         opacity: 1;
-    }
-}
-/* General reset and base styles */
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    line-height: 1.6;
-}
-
-header {
-    background-color: #333;
-    color: #ffffff;
-    padding: 10px 0;
-}
-
-.nav-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
-}
-
-.logo {
-    display: flex;
-    align-items: center;
-}
-
-.logo img {
-    width: 50px; /* Adjust the width of the logo image */
-    margin-right: 10px; /* Add some spacing between logo and text */
-}
-
-.header-title {
-    margin: 0;
-    font-size: 1.5rem; /* Adjust as needed */
-    line-height: 1; /* Set line-height to 1 to remove spacing */
-}
-
-.sub-text {
-    font-size: 0.8rem; /* Adjust as needed */
-    color: #868686; /* Example color */
-    display: block; /* Ensures each line is on its own line */
-    margin-top: 5px; /* Add spacing between title and subtitle */
-}
-
-.nav-links {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    gap: 15px;
-}
-
-.nav-links li {
-    display: inline;
-}
-
-.nav-links a {
-    color: #ffd900;
-    text-decoration: none;
-    font-size: 16px;
-    padding: 5px 10px;
-    transition: background-color 0.3s;
-}
-
-.nav-links a:hover {
-    background-color: #575757;
-    border-radius: 5px;
-}
-
-.menu-icon {
-    display: none; /* Hide the icon by default on larger screens */
-    cursor: pointer;
-}
-
-.bar {
-    width: 25px;
-    height: 3px;
-    background-color: #333; /* Customize the color */
-    margin: 4px 0;
-}
-@media screen and (max-width: 768px) {
-    .menu-icon {
-        display: block;
     }
 }

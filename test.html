@@ -13,7 +13,7 @@
         <nav>
             <div class="nav-container">
                 <div class="logo">
-                    <img src="pics\logo.jpeg" style="width: 10%" alt="Logo">
+                    <img src="pics/logo.jpeg" style="width: 50px;" alt="Logo">
                     <div>
                         <h1 class="header-title">
                             ARK CERAMICS
@@ -21,30 +21,34 @@
                         </h1>
                     </div>
                 </div>
-    
-                <ul class="nav-links">
+
+                <!-- Hamburger Menu Icon -->
+                <div class="menu-toggle" onclick="toggleMenu()">
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                </div>
+
+                <ul class="nav-links" id="navLinks">
                     <li><a href="#about">ABOUT</a></li>
                     <li><a href="#gallery">GALLERY</a></li>
-                    <li><a href="#sizes">TILES</a></li>
+                    <li><a href="#tiles">TILES</a></li>
                     <li><a href="#contact">CONTACT</a></li>
                 </ul>
             </div>
         </nav>
     </header>
-    
 
     <main>
-
         <div class="container">
             <div class="logo-main">
-                <img src="pics\logo.jpeg" class="logo-image" alt="Logo">
-                <div class="logo-text" >
+                <img src="pics/logo.jpeg" class="logo-image" alt="Logo">
+                <div class="logo-text">
                     <h2>ARK CERAMICS</h2>
-                    
                 </div>
             </div>
         </div>
-        
+
         <div id="about" class="about-section">
             <div class="cover">
                 <div class="cover-content">
@@ -53,25 +57,19 @@
                 </div>
             </div>
         </div>
-        
 
         <div class="slideshow-container">
-            
             <div class="mySlides fade">
-                <img src="pics\images (1).jpg" style="width:50%">
+                <img src="pics/images (1).jpg" style="width:50%">
             </div>
             <div class="mySlides fade">
-                <img src="pics\images (2).jpg" style="width:50%">
+                <img src="pics/images (2).jpg" style="width:50%">
             </div>
             <div class="mySlides fade">
-                <img src="pics\pic2.jpg" style="width:50%">
+                <img src="pics/pic2.jpg" style="width:50%">
             </div>
         </div>
-        
 
-
-
-        
         <div id="contact" class="contact-section">
             <div class="spacer"></div>
             <div class="columns">
@@ -94,6 +92,13 @@
     </footer>
 
     <script>
+        // Toggle menu function
+        function toggleMenu() {
+            var navLinks = document.getElementById("navLinks");
+            navLinks.classList.toggle("active");
+        }
+
+        // Slideshow script
         var slideIndex = 0;
         showSlides();
 
@@ -104,10 +109,21 @@
                 slides[i].style.display = "none";
             }
             slideIndex++;
-            if (slideIndex > slides.length) { slideIndex = 1 }
+            if (slideIndex > slides.length) {
+                slideIndex = 1
+            }
             slides[slideIndex - 1].style.display = "block";
             setTimeout(showSlides, 2000); // Change image every 2 seconds
         }
+        
+        function toggleMenu() {
+    var navLinks = document.getElementById("navLinks");
+    var menuToggle = document.querySelector(".menu-toggle");
+
+    navLinks.classList.toggle("menu-open"); // Toggle the class to show/hide menu
+    menuToggle.classList.toggle("menu-open"); // Toggle the class to change icon animation
+}
+
     </script>
 </body>
 

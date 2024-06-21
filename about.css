@@ -105,3 +105,16 @@ h2 {
     display: flex;
     justify-content: center;
 }
+
+
+.intro {
+    text-align: justify;
+}
+
+.intro h1 {
+    text-align: center;
+}
+
+.intro p {
+    margin-top: 10px; /* Adjust as needed */
+}

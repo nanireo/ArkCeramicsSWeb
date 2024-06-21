@@ -100,6 +100,7 @@ header {
     }
 }
 
+
 /* header  \end{code} */
 
 
@@ -277,12 +278,12 @@ header {
 }
 
 .box {
-    border: 1px solid #694949;
+    border: 1px solid #cbcbcb;
     padding: 10px;
     width: 300px;
     height: 300px; /* Ensuring the same height for all boxes */
     box-sizing: border-box; /* Ensures padding and border are included in the width and height */
-    background-color: rgb(55, 55, 55); /* Sets a uniform background color */
+    background-color: rgb(234, 234, 234); /* Sets a uniform background color */
     transition: transform 0.3s ease; /* Adds transition for hover effect */
     text-align: center;
     border-radius: 10px;
@@ -294,11 +295,11 @@ header {
 }
 
 .box h2 {
-    color: lightgrey; /* Sets the heading color to light grey */
+    color: rgb(0, 0, 0); /* Sets the heading color to light grey */
 }
 
 .box p {
-    color: white; /* Sets the paragraph text color to white */
+    color: rgb(0, 0, 0); /* Sets the paragraph text color to white */
 }
 
 /* Responsive design for smaller screens */

@@ -23,6 +23,7 @@
                     <div class="bar"></div>
                     <div class="bar"></div>
                     <div class="bar"></div>
+                    <i class="fas fa-times cross-icon" style="display: none;"></i>
                 </div>
                 <ul class="nav-links" id="navLinks">
                     <li><a href="#HOME">HOME</a></li>
@@ -134,7 +135,59 @@
                     </div>
                 </li>
                 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ark Ceramics</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+</head>
 
+<body>
+    <!-- your HTML code here -->
+
+    <script>
+        // Toggle menu function
+        // function toggleMenu() {
+        //     var navLinks = document.getElementById("navLinks");
+        //     navLinks.classList.toggle("active");
+        // }
+
+        // // Slideshow script
+        // var slideIndex = 0;
+        // showSlides();
+
+        function toggleMenu() {
+            var navLinks = document.getElementById("navLinks");
+            var menuIcon = document.querySelector(".menu-icon");
+            navLinks.classList.toggle("active");
+            menuIcon.classList.toggle("active");
+        }
+
+        function showSlides() {
+            var i;
+            var slides = document.getElementsByClassName("mySlides");
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            slideIndex++;
+            if (slideIndex > slides.length) {
+                slideIndex = 1;
+            }
+            var currentSlide = slides[slideIndex - 1];
+            currentSlide.style.display = "block";
+            currentSlide.classList.add("next"); // add next class to current slide
+            setTimeout(function() {
+                currentSlide.classList.remove("next"); // remove next class after transition
+                currentSlide.classList.add("previous"); // add previous class to current slide
+            }, 3000); // wait for transition to complete
+            setTimeout(showSlides, 5000); // Change image every 2 seconds
+        }
+    </script>
+</body>
+</html>
                 <!-- <li>
                     <img src="\OurcollectionPics\01.jpg" alt="Ceramic Image 1">
                     <div class="overlay"><h2>4 Feet Step & Riser <br>MATT FINISH</h2></div>
@@ -230,8 +283,8 @@
 
 <script>
 
-     // Toggle menu function
-     function toggleMenu() {
+       // Toggle menu function
+       function toggleMenu() {
             var navLinks = document.getElementById("navLinks");
             navLinks.classList.toggle("active");
         }
@@ -239,7 +292,7 @@
         // Slideshow script
         var slideIndex = 0;
         showSlides();
-        
+
         function showSlides() {
             var i;
             var slides = document.getElementsByClassName("mySlides");
@@ -259,10 +312,59 @@
             }, 3000); // wait for transition to complete
             setTimeout(showSlides, 5000); // Change image every 2 seconds
         }
-        </script>
+  </script>
 
         
 
 </body>
 
 </html>
+
+<!-- 
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ark Ceramics</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+</head>
+
+<body>
+    <!-- your HTML code here
+
+    <script>
+        // Toggle menu function
+        function toggleMenu() {
+            var navLinks = document.getElementById("navLinks");
+            navLinks.classList.toggle("active");
+        }
+
+        // Slideshow script
+        var slideIndex = 0;
+        showSlides();
+
+        function showSlides() {
+            var i;
+            var slides = document.getElementsByClassName("mySlides");
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            slideIndex++;
+            if (slideIndex > slides.length) {
+                slideIndex = 1;
+            }
+            var currentSlide = slides[slideIndex - 1];
+            currentSlide.style.display = "block";
+            currentSlide.classList.add("next"); // add next class to current slide
+            setTimeout(function() {
+                currentSlide.classList.remove("next"); // remove next class after transition
+                currentSlide.classList.add("previous"); // add previous class to current slide
+            }, 3000); // wait for transition to complete
+            setTimeout(showSlides, 5000); // Change image every 2 seconds
+        }
+    </script>
+</body>
+</html> -->

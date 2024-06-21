@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ark Ceramics</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="Full body step & riser4.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body>
+
+<header>
+    <nav>
+        <div class="nav-container">
+            <div class="logo">
+                <img src="pics/Untitled-2.png" alt="Logo" class="logo-image">
+            </div>
+            <!-- Hamburger Menu Icon -->
+            <div class="menu-icon" onclick="toggleMenu()">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="cross-icon">&times;</span>
+            </div>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="/Home.html">HOME</a></li>
+                <li><a href="/about.html">ABOUT US</a></li>
+                <li class="dropdown">
+                    <a href="#COLLECTION">COLLECTION</a>
+                    <ul class="dropdown-content">
+                        <li class="dropdown-submenu">
+                            <a href="#4FEET">4 FEET STEP & RISER</a>
+                            <ul class="submenu-content">
+                                <li><a href="/Full body step & riser.html">FULL BODY STEP & RISER</a></li>
+                                <li><a href="/Pixel Series Step & Riser.html">PIXEL STEP & RISER</a></li>
+                                <li><a href="/GVT Step & Riser.html">GVT STEP & RISER</a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown-submenu">
+                            <a href="#3.25FEET">3.25 FEET STEP & RISER</a>
+                            <ul class="submenu-content">
+                                <li><a href="/GVT Step & Riser2.css">GVT STEP & RISER</a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown-submenu">
+                            <a href="#3FEET">3 FEET STEP & RISER</a>
+                            <ul class="submenu-content">
+                                <li><a href="GVT Step & Riser3.html">GVT STEP & RISER</a></li>
+                                <li><a href="Full body step & riser4.html">FULL BODY STEP & RISER</a></li>
+                                <li><a href="Volvo Step & Riser.html">VOLVO STEP & RISER</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li><a href="/packing-detail.html">PACKING DETAIL</a></li>
+                <li><a href="/contact.html">CONTACT US</a></li>
+            </ul>
+        </div>
+    </nav>
+</header>
+
+<div id="HOME" class="slideshow-container">
+    <div  class="mySlides">
+        <img src="\collection\04 (1).jpg" alt="Ceramic Image 2">
+        <div class="overlay-text"><h2>FULL BODY STEP & RISER</h2></div>
+    </div>
+</div>
+
+<main>
+    <div class="image-grid">
+        <div class="image-container">
+            <img src="\collection\3 ft step & riser\GVT STEP & RISER3\301.jpg" alt="Step & Riser">
+            <div class="overlay-text">901 - Step & Riser</div>
+        </div>
+        <div class="image-container">
+            <img src="\collection\3 ft step & riser\GVT STEP & RISER3\302.jpg" alt="Step & Riser">
+            <div class="overlay-text">902 - Step & Riser</div>
+        </div>
+        <div class="image-container">
+            <img src="\collection\3 ft step & riser\GVT STEP & RISER3\307.jpg" alt="Step & Riser">
+            <div class="overlay-text">903 - Step & Riser</div>
+        </div>
+        
+</main>
+
+
+
+<footer>
+    <div id="contact" class="contact-section">
+        <div class="spacer"></div>
+        <div class="columns">
+            <div class="column address-column">
+                <p>Contact us</p>
+                <p class="contact-info">+91 7799055050<br>arkceramics@gmail.com</p>
+            </div>
+            <div class="column address-column">
+                <p>Address of Principal Place of Business</p>
+                <p>SURVEY NO: 82, PLOT NO: 21 A
+                    <br>JAGGAMMAGARIPETA, SAMALKOT
+                    <br>East Godavari Andhra Pradesh, 533440</p>
+            </div>
+        </div>
+        <div class="spacer"></div>
+    </div>
+    <div class="social-icons">
+        <a href="https://wa.me/917799055050" target="_blank" rel="noopener noreferrer" class="social-icon" style="color: white; font-size: 24px; margin-right: 10px; text-decoration: none;">
+            <i class="fab fa-whatsapp"></i>
+        </a>
+        <a href="https://instagram.com/arkceramics" target="_blank" rel="noopener noreferrer" class="social-icon" style="color: white; font-size: 24px; margin-right: 10px; text-decoration: none;">
+            <i class="fab fa-instagram"></i>
+        </a>
+        <a href="https://facebook.com/arkceramics" target="_blank" rel="noopener noreferrer" class="social-icon" style="color: white; font-size: 24px; text-decoration: none;">
+            <i class="fab fa-facebook-f"></i>
+        </a>
+    </div>
+    <p style="font-size: 10px;">Powered By <a href="https://nreosoftwaresolutions.wordpress.com/" target="_blank" rel="noopener noreferrer" style="color: white; font-size: 10px;">N-Reo Software Solutions</a></p>
+</footer>
+
+<script>
+    // Toggle menu function
+    function toggleMenu() {
+        var navLinks = document.getElementById("navLinks");
+        navLinks.classList.toggle("active");
+        var bars = document.querySelectorAll('.bar');
+        bars.forEach(bar => bar.classList.toggle('hidden'));
+        var crossIcon = document.querySelector('.cross-icon');
+        crossIcon.style.display = crossIcon.style.display === 'none' ? 'block' : 'none';
+    }
+
+    var slideIndex = 0;
+    showSlides();
+
+    function showSlides() {
+        var i;
+        var slides = document.getElementsByClassName("mySlides");
+        for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+        }
+        slideIndex++;
+        if (slideIndex > slides.length) {
+            slideIndex = 1;
+        }
+        var currentSlide = slides[slideIndex - 1];
+        currentSlide.style.display = "block";
+        currentSlide.classList.add("next"); // add next class to current slide
+        setTimeout(function() {
+            currentSlide.classList.remove("next"); // remove next class after transition
+            currentSlide.classList.add("previous"); // add previous class to current slide
+        }, 3000); // wait for transition to complete
+        setTimeout(showSlides, 5000); // Change image every 5 seconds
+    }
+
+
+</script>
+
+</body>
+</html>

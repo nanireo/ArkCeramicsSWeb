@@ -1,0 +1,234 @@
+.overlay-text {
+    position: absolute;
+    bottom: 10px; /* Adjust as per your preference */
+    left: 10px; /* Place the text at the bottom right corner */
+    transform: translateX(0); /* No need to translate horizontally */
+    color: white; /* Text color */
+    padding: 10px 20px; /* Padding around text */
+    font-size: 30px; /* Font size */
+    font-family: 'Cedarville Cursive', cursive; ; /* Stylish font */
+  }
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f5f5;
+}
+
+nav {
+    background-color: #333;
+    color: white;
+    padding: 10px 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.logo-image {
+    height: 50px;
+}
+
+.menu-icon {
+    display: none;
+    cursor: pointer;
+}
+
+.menu-icon .bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    margin: 5px 0;
+}
+
+.nav-links {
+    list-style-type: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links li {
+    margin-left: 20px;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.nav-links a:hover {
+    text-decoration: underline;
+}
+
+.dropdown-content, .submenu-content {
+    display: none;
+    position: absolute;
+    background-color: white;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.dropdown-content a, .submenu-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover, .submenu-content a:hover {
+    background-color: #ddd;
+}
+
+.dropdown:hover .dropdown-content, .dropdown-submenu:hover .submenu-content {
+    display: block;
+}
+
+.slideshow-container {
+    position: relative;
+    max-width: 100%;
+    margin: 20px auto;
+    overflow: hidden;
+}
+
+.mySlides {
+    display: none;
+}
+
+.mySlides img {
+    width: 100%;
+}
+
+
+
+.overlay-text {
+    position: absolute;
+    bottom: 10px; /* Adjust as per your preference */
+    left: 10px; /* Place the text at the bottom left corner */
+    color: white; /* Text color */
+    background-color: rgba(0, 0, 0, 0.7); /* Background color with opacity */
+    padding: 10px 20px; /* Padding around text */
+    font-size: 30px; /* Font size */
+    font-family: 'Cedarville Cursive', cursive; /* Font family */
+    opacity: 0; /* Initially hidden */
+    transition: opacity 0.3s ease-in-out; /* Smooth transition for opacity */
+}
+
+.image-container:hover .overlay-text {
+    opacity: 1; /* Show overlay text on hover */
+}
+
+
+/* .image-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 10px;
+    padding: 20px;
+} */
+
+.image-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Two columns */
+    gap: 40px; /* Gap between grid items */
+    padding: 40px; /* Padding around the grid */
+}
+
+
+.image-container {
+    position: relative;
+    overflow: hidden;
+}
+
+.image-container img {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: transform 0.3s ease-in-out;
+}
+
+.image-container:hover img {
+    transform: scale(1.1);
+}
+
+.image-name {
+    position: absolute;
+    bottom: 5px;
+    left: 5px;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    padding: 5px;
+    font-size: 12px;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+.contact-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.columns {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+}
+
+.address-column {
+    width: 30%;
+}
+
+.social-icons {
+    margin-top: 20px;
+}
+
+.social-icon {
+    color: white;
+    font-size: 24px;
+    margin-right: 10px;
+    text-decoration: none;
+}
+
+.spacer {
+    height: 20px;
+}
+
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background-color: #333;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .menu-icon {
+        display: block;
+    }
+
+    .dropdown-content, .submenu-content {
+        position: static;
+        box-shadow: none;
+    }
+}

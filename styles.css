@@ -6,30 +6,23 @@ body {
     line-height: 1.6;
 }
 
-
-/* header */
+/* Header */
 header {
     background-color: #333;
     color: #ffffff;
     padding: 10px 0;
-    position: fixed; /* Fix the header at the top */
+    position: fixed;
     top: 0;
     width: 100%;
-    z-index: 1000; /* Ensure the header is above other content */
+    z-index: 1000;
 }
 
 .nav-container {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    /* max-width: 1200px; */
-    margin: 0 auto; /* Center the nav-container */
-    padding: 0 20px; /* Add some padding for better spacing */
-}
-
-.logo {
-    display: flex;
-    align-items: center;
+    margin: 0 auto;
+    padding: 0 20px;
 }
 
 .logo img {
@@ -62,48 +55,53 @@ header {
     border-radius: 5px;
 }
 
-.menu-icon {
-    display: none;
-    flex-direction: column;
-    cursor: pointer;
-}
-
-.bar {
+.menu-icon .bar {
     width: 25px;
     height: 3px;
     background-color: #ffd900;
     margin: 4px 0;
+    transition: background-color 0.3s;
+}
+
+.menu-icon .cross-icon {
+    display: none;
+    color: #ffffff;
+    font-size: 24px;
 }
 
 @media screen and (max-width: 768px) {
-    .menu-icon {
-        display: flex;
+    .menu-icon.active .cross-icon {
+        display: block;
+    }
+    .menu-icon.active .bar {
+        display: none;
     }
     .nav-links {
         display: none;
-        flex-direction: column;
-        width: 100%;
-        text-align: center;
-        background-color: #333;
         position: absolute;
         top: 50px;
         left: 0;
-        padding: 10px 0;
-        z-index: 1000;
+        width: 100%;
+        background-color: #333;
+        padding: 20px;
     }
     .nav-links.active {
-        display: flex;
-    }
-    .nav-links li {
         display: block;
-        margin: 10px 0;
+    }
+    .nav-links.active li {
+        display: block;
+    }
+    .nav-links.active a {
+        display: block;
+        padding: 10px;
+        border-bottom: 1px solid #444;
+    }
+    .nav-links.active a:hover {
+        background-color: #555;
     }
 }
 
-
-/* header  \end{code} */
-
-
+/* About and Contact Sections */
 .about-section,
 .contact-section {
     padding: 10px;
@@ -118,7 +116,6 @@ header {
 .column {
     flex: 1;
     max-width: 600px;
-    /* padding: 0 20px; */
     text-align: center;
 }
 
@@ -130,106 +127,22 @@ header {
     font-size: 18px;
 }
 
-
-/* Responsive adjustments */
-@media (max-width: 600px) {
-    .columns {
-        flex-direction: column;
-        align-items: center;
-    }
-}
-
-/* Slideshow styles */
+/* Slideshow Styles */
 .slideshow-container {
     max-width: 100%;
-    height: 70vh;  /* Ensures the container itself is limited to 50% of the viewport height */
+    height: 70vh;
     overflow: hidden;
     position: relative;
-    /* margin: auto; */
 }
-
-.mySlides {
-    margin: 0;
-    padding: 0;
-  }
-
-/* .mySlides img {
-    width: 100%;  /* Maintain the aspect ratio of the image 
-    max-width: 100%;  /* Ensures the image width does not exceed the container width 
-    max-height: 100%;  /* Ensures the image height does not exceed the container height 
-    display: block;
-    /* margin: auto; 
-} */
 
 .mySlides img {
     width: 100%;
-    height: 100vh; /* adjust the height according to your needs */
+    height: 100vh;
     object-fit: cover;
-  }
-
-  .slideshow-container {
-    margin-bottom: 0;
-    padding-bottom: 0;
-  }
-
-/* Define keyframes for fade effect */
-@keyframes fadeEffect {
-    from {
-        opacity: 0;
-    }
-    to {
-        opacity: 1;
-    }
 }
 
-
-
-/* Container styling */
-/* .container {
-    padding: 20px;
-} */
-
-/* Row styling */
-.row {
-    display: flex;
-    justify-content: center;
-}
-
-/* Column styling */
-/* style.css */
-  
-  /* .container {
-    width: 80%;
-    margin: auto;
-    text-align: center;
-    
-  }
-  
-  .container-texth1 {
-    font-size: 36px;
-    font-weight: bold;
-    color: #333;
-    margin-bottom: 10px;
-    text-transform: uppercase;
-  }
-  
-  .container-texth2 {
-    font-size: 24px;
-    font-weight: bold;
-    color: #333;
-    margin-bottom: 20px;
-    text-transform: uppercase;
-  }
-  
-  .container-text {
-    font-size: 18px;
-    color: #666;
-    line-height: 1.6;
-    margin-bottom: 20px;
-  }
-   */
-  /* container-STEP */
-  .container {
+/* Container and Box Styles */
+.container {
     width: 80%;
     margin: auto;
     text-align: center;
@@ -250,30 +163,11 @@ header {
     margin-bottom: 20px;
 }
 
-.intro-heading {
-    font-size: 28px;
-    font-weight: bold;
-    color: #333;
-    margin-bottom: 10px;
-    text-transform: uppercase;
-}
-
-.intro-heading:last-of-type {
-    font-size: 24px;
-    font-weight: normal;
-    font-style: italic;
-    margin-bottom: 20px;
-}
-
-  
-
-  /* BOX */
-  .container-box {
+.container-box {
     display: flex;
-    flex-wrap: wrap; /* Ensures boxes wrap on smaller screens */
+    flex-wrap: wrap;
     gap: 10px;
     justify-content: center;
-    align-items: center;
     font-size: 18px;
 }
 
@@ -281,45 +175,22 @@ header {
     border: 1px solid #cbcbcb;
     padding: 10px;
     width: 300px;
-    height: 300px; /* Ensuring the same height for all boxes */
-    box-sizing: border-box; /* Ensures padding and border are included in the width and height */
-    background-color: rgb(234, 234, 234); /* Sets a uniform background color */
-    transition: transform 0.3s ease; /* Adds transition for hover effect */
+    height: 300px;
+    box-sizing: border-box;
+    background-color: rgb(234, 234, 234);
+    transition: transform 0.3s ease;
     text-align: center;
     border-radius: 10px;
-
 }
 
 .box:hover {
-    transform: scale(1.05); /* Slightly increases size on hover */
+    transform: scale(1.05);
 }
 
-.box h2 {
-    color: rgb(0, 0, 0); /* Sets the heading color to light grey */
-}
-
-.box p {
-    color: rgb(0, 0, 0); /* Sets the paragraph text color to white */
-}
-
-/* Responsive design for smaller screens */
-@media (max-width: 600px) {
-    .box {
-        width: 100%; /* Full width for small screens */
-        height: auto; /* Height adjusts based on content */
-    }
-}
-
-/* ExploreOurcollection */
-.container {
-    max-width: 1200px; /* Adjust max-width as needed */
-    margin: 0 auto;
-    padding: 20px;
-}
-
+/* Image Gallery */
 .image-gallery {
     display: grid;
-    grid-template-columns: repeat(3, 1fr); /* 3 images per row */
+    grid-template-columns: repeat(3, 1fr);
     gap: 15px;
     list-style-type: none;
     padding: 0;
@@ -329,7 +200,7 @@ header {
 .image-gallery li {
     position: relative;
     overflow: hidden;
-    border-radius: 10px; /* Rounded corners for images */
+    border-radius: 10px;
 }
 
 .image-gallery img {
@@ -349,7 +220,7 @@ header {
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.7); /* Overlay background color */
+    background: rgba(0, 0, 0, 0.7);
     color: #fff;
     display: flex;
     flex-direction: column;
@@ -365,15 +236,17 @@ header {
 
 @media (max-width: 992px) {
     .image-gallery {
-        grid-template-columns: repeat(2, 1fr); /* 2 images per row on medium screens */
+        grid-template-columns: repeat(2, 1fr);
     }
 }
 
 @media (max-width: 576px) {
     .image-gallery {
-        grid-template-columns: repeat(1, 1fr); /* 1 image per row on small screens */
+        grid-template-columns: repeat(1, 1fr);
     }
 }
+
+/* Modal Styles */
 .view-button {
     position: absolute;
     top: 10px;
@@ -385,7 +258,7 @@ header {
 }
 
 .modal {
-    display: none; /* Hidden by default */
+    display: none;
     position: fixed;
     z-index: 999;
     left: 0;
@@ -393,8 +266,7 @@ header {
     width: 50%;
     height: 50%;
     overflow: auto;
-    background-color: rgb(0,0,0);
-    background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+    background-color: rgba(0, 0, 0, 0.9);
     align-items: center;
 }
 
@@ -423,10 +295,7 @@ header {
     cursor: pointer;
 }
 
-
-
-/* footer */
-
+/* Footer */
 footer {
     background-color: #9a9a9a;
     padding: 20px;
@@ -447,12 +316,7 @@ footer {
     justify-content: space-between;
     width: 100%;
     max-width: 800px;
-    gap: 20px; /* Adjust spacing between the columns */
-}
-
-.column {
-    flex: 1;
-    padding: 10px;
+    gap: 20px;
 }
 
 .contact-info-column h2, 
@@ -463,4 +327,135 @@ footer {
 
 .spacer {
     height: 20px;
+}
+
+/* Dropdown Menu */
+.dropdown-content, .submenu-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown-submenu:hover .submenu-content {
+    display: block;
+    left: 100%;
+    top: 0;
+}
+
+.dropdown-content a, .submenu-content a {
+    color: #000000;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.nav-links a:hover {
+    background-color: #ddd;
+}
+
+/* Additional Styles */
+.intro-heading {
+    font-size: 28px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+
+.intro-heading:last-of-type {
+    font-size: 24px;
+    font-weight: normal;
+    font-style: italic;
+    margin-bottom: 20px;
+}
+
+/* New CSS Styles Provided */
+
+/* Sidebar */
+.sidebar {
+    position: fixed;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 250px;
+    background-color: #333;
+    color: #fff;
+    padding-top: 20px;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+    margin: 20px;
+}
+
+.sidebar ul li {
+    margin-bottom: 10px;
+}
+
+.sidebar ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+    transition: opacity 0.3s;
+}
+
+.sidebar ul li a:hover {
+    opacity: 0.8;
+}
+
+/* Gallery Section */
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+.gallery-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+.gallery-item:hover img {
+    transform: scale(1.1);
+}
+
+.gallery-item .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.gallery-item:hover .overlay {
+    opacity: 1;
+}
+
+.overlay-text {
+    text-align: center;
 }

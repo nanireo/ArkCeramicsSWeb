@@ -1,16 +1,32 @@
+/* General Styles */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f8f8f8;
+}
+
 .contact-container {
     display: flex;
-    flex-wrap: wrap; /* Allow items to wrap to the next line on smaller screens */
+    flex-wrap: wrap;
     justify-content: space-between;
     padding: 20px;
+    background-color: #fff;
+    margin: 20px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
 }
 
 .contact-infop {
-    width: 100%; /* Full width on smaller screens */
-    box-sizing: border-box;
+    flex: 1;
     background-color: #f0f0f0;
     padding: 20px;
-    margin-bottom: 20px; /* Add margin at the bottom */
+    margin-bottom: 20px;
+    border-radius: 5px;
 }
 
 .contact-detail {
@@ -20,22 +36,20 @@
 }
 
 .icon {
-    width: 20px; /* Adjust size of icons as needed */
+    width: 20px;
     height: auto;
     margin-right: 10px;
 }
 
 .map-container {
-    width: 100%; /* Full width on smaller screens */
-    box-sizing: border-box;
-    margin-bottom: 20px; /* Add margin at the bottom */
+    flex: 1;
+    margin-bottom: 20px;
 }
 
 .map {
     position: relative;
     overflow: hidden;
     padding-top: 56.25%; /* 16:9 aspect ratio for responsive iframe */
-    background-color: #fff;
 }
 
 .map iframe {
@@ -47,14 +61,55 @@
     border: 0;
 }
 
-/* Media Query for Tablet/Desktop Screens */
-@media (min-width: 768px) {
+.contact-form {
+    max-width: 600px;
+    margin: 40px auto;
+    text-align: center;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 15px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+.contact-form textarea {
+    resize: vertical; /* Allow vertical resizing of textarea */
+}
+
+.contact-form button {
+    width: 100%;
+    padding: 12px 20px;
+    background-color: #d4a24c;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .contact-container {
+        flex-direction: column;
+    }
+
     .contact-infop {
-        width: calc(50% - 10px); /* 50% width with margin */
-        margin-right: 20px; /* Adjust margin between contact info and map */
+        margin-bottom: 20px;
     }
 
     .map-container {
-        width: calc(50% - 10px); /* 50% width with margin */
+        margin-bottom: 20px;
+    }
+
+    .contact-form,
+    .map {
+        padding: 10px; /* Adjust padding for smaller screens */
     }
 }

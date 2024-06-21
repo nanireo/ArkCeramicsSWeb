@@ -234,29 +234,17 @@ header {
     opacity: 1;
 }
 
-
-@media (max-width: 768px) {
-    .nav-links {
-        display: none;
-        flex-direction: column;
-        width: 100%;
-        background-color: #333;
-    }
-
-    .nav-links.active {
-        display: flex;
-    }
-
-    .menu-icon {
-        display: block;
-    }
-
-    .dropdown-content, .submenu-content {
-        position: static;
-        box-shadow: none;
+@media (max-width: 992px) {
+    .image-gallery {
+        grid-template-columns: repeat(2, 1fr);
     }
 }
 
+@media (max-width: 576px) {
+    .image-gallery {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
 
 /* Modal Styles */
 .view-button {
@@ -342,6 +330,22 @@ footer {
 }
 
 /* Dropdown Menu */
+.dropdown-submenu {
+    position: relative;
+}
+
+.dropdown-submenu:hover .submenu-content {
+    display: block;
+    top: 0;
+    right: 100%; /* move submenu to the left side of main menu */
+}
+
+.submenu-content {
+    position: absolute;
+    left: -160px; /* adjust this value to match the width of the submenu */
+    top: 0;
+}
+
 .dropdown-content, .submenu-content {
     display: none;
     position: absolute;
@@ -349,16 +353,12 @@ footer {
     min-width: 160px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 1;
+    border-radius: 10px; /* add a curved shape */
+    transition: background-color 0.3s; /* add a transition effect */
 }
 
 .dropdown:hover .dropdown-content {
     display: block;
-}
-
-.dropdown-submenu:hover .submenu-content {
-    display: block;
-    left: 100%;
-    top: 0;
 }
 
 .dropdown-content a, .submenu-content a {
@@ -368,27 +368,73 @@ footer {
     display: block;
 }
 
-.nav-links a:hover {
-    background-color: #ddd;
+.dropdown-content a:hover, .submenu-content a:hover {
+    background-color: #ccc; /* change background color of links on hover */
+    color: #666; /* change text color of links on hover */
 }
 
-/* Additional Styles */
-.intro-heading {
-    font-size: 28px;
-    font-weight: bold;
-    color: #333;
-    margin-bottom: 10px;
-    text-transform: uppercase;
+.dropdown-content:before, .submenu-content:before {
+    content: "";
+    position: absolute;
+    top: -10px;
+    left: 10px;
+    border-bottom: 10px solid #f9f9f9;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
 }
 
-.intro-heading:last-of-type {
-    font-size: 24px;
-    font-weight: normal;
-    font-style: italic;
-    margin-bottom: 20px;
+.dropdown-content:after, .submenu-content:after {
+    content: "";
+    position: absolute;
+    bottom: -10px;
+    left: 10px;
+    border-top: 10px solid #f9f9f9;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
 }
 
-/* New CSS Styles Provided */
+.dropdown-content:hover, .submenu-content:hover {
+    background-color: #f0f0f0; /* change background color on hover */
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.3); /* add a deeper shadow on hover */
+}
+
+.submenu-content:before {
+    left: -10px; /* adjust this value */
+}
+
+.submenu-content:after {
+    left: -10px; /* adjust this value */
+}
+
+.submenu-content {
+    position: absolute;
+    left: -160px; /* adjust this value to match the width of the submenu */
+    top: 0;
+}
+
+/* Add responsiveness to dropdown menu list */
+
+/* For screens with a maximum width of 768px */
+@media only screen and (max-width: 768px) {
+  .dropdown-content, .submenu-content {
+    min-width: 120px; /* adjust the width of the dropdown content */
+  }
+  .dropdown-content a, .submenu-content a {
+    padding: 8px 12px; /* adjust the padding of the dropdown links */
+    font-size: 14px; /* adjust the font size of the dropdown links */
+  }
+}
+
+/* For screens with a maximum width of 480px */
+@media only screen and (max-width: 480px) {
+  .dropdown-content, .submenu-content {
+    min-width: 90px; /* adjust the width of the dropdown content */
+  }
+  .dropdown-content a, .submenu-content a {
+    padding: 6px 10px; /* adjust the padding of the dropdown links */
+    font-size: 12px; /* adjust the font size of the dropdown links */
+  }
+}
 
 /* Sidebar */
 .sidebar {
@@ -415,8 +461,6 @@ footer {
 .sidebar ul li a {
     color: #fff;
     text-decoration: none;
-    font-size: 16px;
-    transition: opacity 0.3s;
 }
 
 .sidebar ul li a:hover {

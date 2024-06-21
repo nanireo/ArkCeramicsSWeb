@@ -17,6 +17,17 @@
     padding: 8px; /* Decreased padding around the table */
 }
 
+.overlay-text {
+    position: absolute;
+    bottom: 10px; /* Adjust as per your preference */
+    left: 10px; /* Place the text at the bottom right corner */
+    transform: translateX(0); /* No need to translate horizontally */
+    color: white; /* Text color */
+    padding: 10px 20px; /* Padding around text */
+    font-size: 30px; /* Font size */
+    font-family: 'Cedarville Cursive', cursive; ; /* Stylish font */
+  }
+
 .membership-pricing-table table {
     width: 100%;
     border-collapse: collapse;

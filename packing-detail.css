@@ -1,0 +1,66 @@
+/* Center align tables */
+.table-container {
+    margin: 20px auto; /* Center align with some top and bottom margin */
+    max-width: 500px; /* Decrease max-width for smaller table */
+    overflow-x: auto; /* Allow horizontal scroll on smaller screens */
+}
+
+/* Adjust table styles */
+.membership-pricing-table {
+    width: 80%; /* Full width */
+    margin: 20px auto; /* Center align with some top and bottom margin */
+    margin-bottom: 20px; /* Decreased space between tables */
+    border-radius: 8px; /* Rounded corners for tables */
+    overflow: hidden; /* Ensure content does not overflow */
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.1); /* Add shadow for depth */
+    border: 1px solid #cccccc; /* Add border around the table */
+    padding: 8px; /* Decreased padding around the table */
+}
+
+.membership-pricing-table table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: auto;
+    border-spacing: 0; /* Ensure no space between cells */
+}
+
+/* Apply grey background to even rows */
+.membership-pricing-table table tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+/* Apply light grey background to odd rows */
+.membership-pricing-table table tr:nth-child(odd) {
+    background-color: #e8e8e8;
+}
+
+/* Style table headers */
+.membership-pricing-table table th {
+    background-color: #666666;
+    color: white;
+    padding: 12px; /* Decreased padding */
+    text-align: center;
+    font-weight: bold; /* Ensure headers are bold */
+    font-size: 19px; /* Decreased font size */
+}
+
+/* Style table cells */
+.membership-pricing-table table td {
+    padding: 12px; /* Decreased padding */
+    text-align: center;
+    font-size: 16px; /* Decreased font size */
+}
+
+/* Responsive adjustments */
+@media only screen and (max-width: 768px) {
+    .membership-pricing-table {
+        width: 100%; /* Full width on smaller screens */
+        overflow-x: auto; /* Allow horizontal scroll on smaller screens */
+    }
+    
+    .membership-pricing-table table th,
+    .membership-pricing-table table td {
+        padding: 100px; /* Further decreased padding */
+        font-size: 20px; /* Adjusted font size */
+    }
+}

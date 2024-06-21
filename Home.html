@@ -26,13 +26,14 @@
                 </div>
                 <ul class="nav-links" id="navLinks">
                     <li><a href="#HOME">HOME</a></li>
-                    <li><a href="#ABOUT US">ABOUT US</a></li>
+                    <li><a href="\about.html">ABOUT US</a></li>
                     <li><a href="#COLLECTION">COLLECTION</a></li>
-                    <li><a href="#PACKING DETAIL">PACKING DETAIL</a></li>
+                    <li><a href="\packing-detail.html">PACKING DETAIL</a></li>
                     <li><a href="#contact">CONTACT US</a></li>
                 </ul>
             </div>
         </nav>
+        <!-- C:\Users\Moses\Desktop\ArkCeramicsSWeb -->
     </header>
     
 
@@ -258,40 +259,6 @@
             }, 3000); // wait for transition to complete
             setTimeout(showSlides, 5000); // Change image every 2 seconds
         }
-
-
-
-        document.addEventListener("DOMContentLoaded", function() {
-    const viewButtons = document.querySelectorAll('.view-button');
-    const modals = document.querySelectorAll('.modal');
-    const modalImages = document.querySelectorAll('.modal-content');
-    const closeButtons = document.querySelectorAll('.close');
-
-    // Add click event listeners to view buttons to show corresponding modals
-    viewButtons.forEach((button, index) => {
-        button.addEventListener('click', function() {
-            modals[index].style.display = "block";
-        });
-    });
-
-    // Add click event listeners to close buttons to close the modals
-    closeButtons.forEach((closeButton, index) => {
-        closeButton.addEventListener('click', function() {
-            modals[index].style.display = "none";
-        });
-    });
-
-    // Close modal if user clicks outside of the modal content
-    modals.forEach((modal) => {
-        modal.addEventListener('click', function(event) {
-            if (event.target === modal) {
-                modal.style.display = "none";
-            }
-        });
-    });
-});
-
-
         </script>
 
         

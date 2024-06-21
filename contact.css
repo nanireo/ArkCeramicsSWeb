@@ -100,16 +100,13 @@ body {
         flex-direction: column;
     }
 
-    .contact-infop {
-        margin-bottom: 20px;
-    }
-
+    .contact-infop,
     .map-container {
+        width: 100%; /* Full width on smaller screens */
         margin-bottom: 20px;
     }
 
-    .contact-form,
-    .map {
+    .contact-form {
         padding: 10px; /* Adjust padding for smaller screens */
     }
 }

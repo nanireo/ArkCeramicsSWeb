@@ -60,7 +60,7 @@
     
     .membership-pricing-table table th,
     .membership-pricing-table table td {
-        padding: 100px; /* Further decreased padding */
+        padding: 8px; /* Further decreased padding */
         font-size: 20px; /* Adjusted font size */
     }
 }

@@ -62,25 +62,26 @@
 
 
         <div class="container">
-            <!-- <h1 class=container-texth1>WE ARE LEADING</h1> -->
-            <h2 class=container-texth2>STEP & RISER MANUFACTURER</h2>
-            <p class=container-text >ARK CERAMICS produces Vitrified Step & Riser with more than 100+ designs and various sizes.</p>
-            <p class=container-text>Space can become a symbol of comfort when ARK CERAMICS provides new ideas for decorating your home. With special formate like 1200 x 300mm, 1000 x 300mm, 900 x 300mm in Vitrified Step & Riser which seem to enlarge available space and enhance the concepts of living quality.</p>
-          </div>
-        
-
-
-        <div id="HOME" class="about-section">
-            <div class="cover">
-                <div class="cover-content">
-                    <h2 class="intro-heading">Why Rudra Step Riser ?</h2>
-                    <h2 class="intro-heading">We Firmly Believe In Healthy Business Relation.
-                    </h2>
-                    <p class="intro-text">Our wide range of products are production with the latest manufacturing technologies and under the highest quality standards.</p>
+            <div class="container-left">
+                <!-- Uncommented h1 removed as per request -->
+                <h2 class="container-texth2-1">STEP &amp; RISER MANUFACTURER</h2>
+                <p class="container-text">ARK CERAMICS produces Vitrified Step & Riser with more than 100+ designs and various sizes.</p>
+                <p class="container-text">Space can become a symbol of comfort when ARK CERAMICS provides new ideas for decorating your home. With special formats like 1200 x 300mm, 1000 x 300mm, 900 x 300mm in Vitrified Step & Riser which seem to enlarge available space and enhance the concepts of living quality.</p>
+            </div>
+            <div class="container-right">
+                <div id="HOME" class="about-section">
+                    <div class="cover">
+                        <div class="cover-content">
+                            <h2 class="intro-heading-1">Why Rudra Step Riser ?</h2>
+                            <h2 class="intro-heading-2">We Firmly Believe In Healthy Business Relation.</h2>
+                            <p class="intro-text">Our wide range of products are production with the latest manufacturing technologies and under the highest quality standards.</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
 
+        
         <div class="container-box">
             <div class="box">
                 <h2>Research & Development</h2>
@@ -103,6 +104,91 @@
             </div>
         </div>
          
+
+
+                
+
+
+          <div class="container">
+
+            <div class="spacer"></div>
+
+            <h2>EXPLORE OUR COLLECTION</h2>
+            <ul class="image-gallery">
+
+                <!-- <li class="gallery-item">
+                    <img src="\OurcollectionPics\01.jpg" alt="Ceramic Image 1">
+                    <div class="overlay"><h2>4 Feet Step & Riser <br>MATT FINISH</h2></div>
+                    <button class="view-button">View</button> <!-- View button added 
+                </li>
+                 -->
+
+                 <li class="gallery-item">
+                    <img src="\OurcollectionPics\01.jpg" alt="Ceramic Image 1">
+                    <div class="overlay"><h2>4 Feet Step & Riser <br>MATT FINISH</h2></div>
+                    <button class="view-button">View</button>
+                    <div class="modal">
+                        <span class="close">&times;</span>
+                        <img class="modal-content" src="\OurcollectionPics\01.jpg">
+                    </div>
+                </li>
+                
+
+                <!-- <li>
+                    <img src="\OurcollectionPics\01.jpg" alt="Ceramic Image 1">
+                    <div class="overlay"><h2>4 Feet Step & Riser <br>MATT FINISH</h2></div>
+                </li> -->
+        
+                <li>
+                    <img src="\OurcollectionPics\02.jpg" alt="Ceramic Image 2">
+                    <div class="overlay"><h2>3.25 Feet Step & Riser <br>MATT FINISH</h2></div>
+                </li>
+                
+                <li>
+                    <img src="\OurcollectionPics\03.jpg" alt="Ceramic Image 2">
+                    <div class="overlay"> <h2>3 Feet Step & Riser <br>MATT FINISH</h2></div>
+                </li>
+        
+                <li>
+                    <img src="\OurcollectionPics\04.jpg" alt="Ceramic Image 2">
+                    <div class="overlay"><h2>3 Feet Step & Riser <br>MATT FINISH</h2></div>
+                </li>
+
+                <li>
+                    <img src="\OurcollectionPics\05.jpg" alt="Ceramic Image 2">
+                    <div class="overlay"><h2>4 Feet Step & Riser
+                        <br>3D HIGH GLOSS</h2></div>
+                </li>
+
+                <li>
+                    <img src="\OurcollectionPics\06.jpg" alt="Ceramic Image 2">
+                    <div class="overlay"><h2>3.25 Feet Step & Riser
+                        <br>MATT FINISH</h2></div>
+                </li>
+
+
+                <li>
+                    <img src="\OurcollectionPics\07.jpg" alt="Ceramic Image 2">
+                    <div class="overlay"><h2>4 Feet Step & Riser
+                        <br>DOUBLE CHARGE</h2></div>
+                </li>
+
+                <li>
+                    <img src="\OurcollectionPics\08.jpg" alt="Ceramic Image 2">
+                    <div class="overlay"><h2>3 Feet Step & Riser
+                        <br>MATT FINISH</h2></div>
+    
+                </li>
+
+                <li>
+                    <img src="\OurcollectionPics\09.jpg" alt="Ceramic Image 9">
+                    <div class="overlay"><h2>3.25 Feet Step & Riser
+                       <br> MATT FINISH</h2></div>
+                </li>
+            </ul>
+        </div>
+        
+
 
       
     </main>
@@ -172,7 +258,43 @@
             }, 3000); // wait for transition to complete
             setTimeout(showSlides, 5000); // Change image every 2 seconds
         }
+
+
+
+        document.addEventListener("DOMContentLoaded", function() {
+    const viewButtons = document.querySelectorAll('.view-button');
+    const modals = document.querySelectorAll('.modal');
+    const modalImages = document.querySelectorAll('.modal-content');
+    const closeButtons = document.querySelectorAll('.close');
+
+    // Add click event listeners to view buttons to show corresponding modals
+    viewButtons.forEach((button, index) => {
+        button.addEventListener('click', function() {
+            modals[index].style.display = "block";
+        });
+    });
+
+    // Add click event listeners to close buttons to close the modals
+    closeButtons.forEach((closeButton, index) => {
+        closeButton.addEventListener('click', function() {
+            modals[index].style.display = "none";
+        });
+    });
+
+    // Close modal if user clicks outside of the modal content
+    modals.forEach((modal) => {
+        modal.addEventListener('click', function(event) {
+            if (event.target === modal) {
+                modal.style.display = "none";
+            }
+        });
+    });
+});
+
+
         </script>
+
+        
 
 </body>
 

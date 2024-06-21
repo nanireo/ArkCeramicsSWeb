@@ -234,17 +234,29 @@ header {
     opacity: 1;
 }
 
-@media (max-width: 992px) {
-    .image-gallery {
-        grid-template-columns: repeat(2, 1fr);
+
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background-color: #333;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .menu-icon {
+        display: block;
+    }
+
+    .dropdown-content, .submenu-content {
+        position: static;
+        box-shadow: none;
     }
 }
 
-@media (max-width: 576px) {
-    .image-gallery {
-        grid-template-columns: repeat(1, 1fr);
-    }
-}
 
 /* Modal Styles */
 .view-button {

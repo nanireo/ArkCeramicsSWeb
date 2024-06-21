@@ -5,59 +5,61 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ark Ceramics</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="Full body step & riser.css">
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 </head>
 <body>
 
-<header>
-    <nav>
-        <div class="nav-container">
-            <div class="logo">
-                <img src="pics/Untitled-2.png" alt="Logo" class="logo-image">
+    <header>
+        <nav>
+            <div class="nav-container">
+                <div class="logo">
+                    <img src="pics/Untitled-2.png" alt="Logo" class="logo-image">
+                </div>
+                <!-- Hamburger Menu Icon -->
+                <div class="menu-icon" onclick="toggleMenu()">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <!-- <span class="cross-icon">&times;</span> -->
+                </div>
+                <ul class="nav-links" id="navLinks">
+                    <li><a href="/Home.html">HOME</a></li>
+                    <li><a href="/about.html">ABOUT US</a></li>
+                    <li class="dropdown">
+                        <a href="#COLLECTION">COLLECTION</a>
+                        <ul class="dropdown-content">
+                            <li class="dropdown-submenu">
+                                <a href="#4FEET">4 FEET STEP & RISER</a>
+                                <ul class="submenu-content">
+                                    <li><a href="/Full body step & riser.html">FULL BODY STEP & RISER</a></li>
+                                    <li><a href="/Pixel Series Step & Riser.html">PIXEL STEP & RISER</a></li>
+                                    <li><a href="/GVT Step & Riser.html">GVT STEP & RISER</a></li>
+                                </ul>
+                            </li>
+                            <li class="dropdown-submenu">
+                                <a href="#3.25FEET">3.25 FEET STEP & RISER</a>
+                                <ul class="submenu-content">
+                                    <li><a href="/GVT Step & Riser2.html">GVT STEP & RISER</a></li>
+                                </ul>
+                            </li>
+                            <li class="dropdown-submenu">
+                                <a href="#3FEET">3 FEET STEP & RISER</a>
+                                <ul class="submenu-content">
+                                    <li><a href="GVT Step & Riser3.html">GVT STEP & RISER</a></li>
+                                    <li><a href="Full body step & riser4.html">FULL BODY STEP & RISER</a></li>
+                                    <li><a href="Volvo Step & Riser.html">VOLVO STEP & RISER</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li><a href="/packing-detail.html">PACKING DETAIL</a></li>
+                    <li><a href="/contact.html">CONTACT US</a></li>
+                </ul>
             </div>
-            <!-- Hamburger Menu Icon -->
-            <div class="menu-icon" onclick="toggleMenu()">
-                <span class="bar"></span>
-                <span class="bar"></span>
-                <span class="bar"></span>
-                <span class="cross-icon">&times;</span>
-            </div>
-            <ul class="nav-links" id="navLinks">
-                <li><a href="#HOME">HOME</a></li>
-                <li><a href="/about.html">ABOUT US</a></li>
-                <li class="dropdown">
-                    <a href="#COLLECTION">COLLECTION</a>
-                    <ul class="dropdown-content">
-                        <li class="dropdown-submenu">
-                            <a href="#4FEET">4 FEET STEP & RISER</a>
-                            <ul class="submenu-content">
-                                <li><a href="/Full body step & riser.html">FULL BODY STEP & RISER</a></li>
-                                <li><a href="/Pixel Series Step & Riser.html">PIXEL STEP & RISER</a></li>
-                                <li><a href="#4FEET-GVT">GVT STEP & RISER</a></li>
-                            </ul>
-                        </li>
-                        <li class="dropdown-submenu">
-                            <a href="#3.25FEET">3.25 FEET STEP & RISER</a>
-                            <ul class="submenu-content">
-                                <li><a href="/GVT Step & Riser2.html">GVT STEP & RISER</a></li>
-                            </ul>
-                        </li>
-                        <li class="dropdown-submenu">
-                            <a href="#3FEET">3 FEET STEP & RISER</a>
-                            <ul class="submenu-content">
-                                <li><a href="/GVT Step & Riser3.html">GVT STEP & RISER</a></li>
-                                <li><a href="/Full body step & riser4.html">FULL BODY STEP & RISER</a></li>
-                                <li><a href="/Volvo Step & Riser.html">VOLVO STEP & RISER</a></li>
-                            </ul>
-                        </li>
-                    </ul>
-                </li>
-                <li><a href="/packing-detail.html">PACKING DETAIL</a></li>
-                <li><a href="/contact.html">CONTACT US</a></li>
-            </ul>
-        </div>
-    </nav>
-</header>
+        </nav>
+    </header>
 
 <main>
     <div id="HOME" class="slideshow-container">
@@ -215,41 +217,40 @@
     function toggleMenu() {
         var navLinks = document.getElementById("navLinks");
         navLinks.classList.toggle("active");
-
-        // Toggle visibility of hamburger bars and cross icon
         var bars = document.querySelectorAll('.bar');
         bars.forEach(bar => bar.classList.toggle('hidden'));
-
         var crossIcon = document.querySelector('.cross-icon');
-        crossIcon.classList.toggle('active');
+        crossIcon.style.display = crossIcon.style.display === 'none' ? 'block' : 'none';
     }
 
-    
-// Slideshow script remains unchanged
-var slideIndex = 0;
-showSlides();
+    var slideIndex = 0;
+    showSlides();
 
-function showSlides() {
-    var i;
-    var slides = document.getElementsByClassName("mySlides");
-    for (i = 0; i < slides.length; i++) {
-        slides[i].style.display = "none";
+    function showSlides() {
+        var i;
+        var slides = document.getElementsByClassName("mySlides");
+        for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+        }
+        slideIndex++;
+        if (slideIndex > slides.length) {
+            slideIndex = 1;
+        }
+        var currentSlide = slides[slideIndex - 1];
+        currentSlide.style.display = "block";
+        currentSlide.classList.add("next"); // add next class to current slide
+        setTimeout(function() {
+            currentSlide.classList.remove("next"); // remove next class after transition
+            currentSlide.classList.add("previous"); // add previous class to current slide
+        }, 3000); // wait for transition to complete
+        setTimeout(showSlides, 5000); // Change image every 5 seconds
     }
-    slideIndex++;
-    if (slideIndex > slides.length) {
-        slideIndex = 1;
-    }
-    var currentSlide = slides[slideIndex - 1];
-    currentSlide.style.display = "block";
-    currentSlide.classList.add("next");
-    setTimeout(function() {
-        currentSlide.classList.remove("next");
-        currentSlide.classList.add("previous");
-    }, 3000);
-    setTimeout(showSlides, 5000);
-}
 
 </script>
 
 </body>
 </html>
+
+
+
+

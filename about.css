@@ -63,10 +63,15 @@ header {
 .intro, .mission-vision-values {
     padding: 2rem;
     margin-top: 0; /* Remove top margin */
+    width: 80%;
+    text-align: justify;
+    margin: auto;
+
 }
 
 .intro p {
     margin: 1rem 0;
+    margin-top: 20px; /* Add margin at the top of each paragraph */
 }
 
 .mission-vision-values {

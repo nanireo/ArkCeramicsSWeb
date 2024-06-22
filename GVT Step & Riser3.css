@@ -78,26 +78,26 @@ nav {
 
 .overlay-text {
     position: absolute;
-    bottom: 10px; /* Adjust as per your preference */
-    left: 10px; /* Place the text at the bottom left corner */
-    color: white; /* Text color */
-    background-color: rgba(0, 0, 0, 0.7); /* Background color with opacity */
-    padding: 10px 20px; /* Padding around text */
-    font-size: 30px; /* Font size */
-    font-family: 'Cedarville Cursive', cursive; /* Font family */
-    opacity: 0; /* Initially hidden */
-    transition: opacity 0.3s ease-in-out; /* Smooth transition for opacity */
+    bottom: 10px;
+    left: 10px;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 10px 20px;
+    font-size: 30px;
+    font-family: 'Cedarville Cursive', cursive;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
 }
 
 .image-container:hover .overlay-text {
-    opacity: 1; /* Show overlay text on hover */
+    opacity: 1;
 }
 
 .image-grid {
     display: grid;
-    grid-template-columns: repeat(2, 1fr); /* Two columns */
-    gap: 40px; /* Gap between grid items */
-    padding: 40px; /* Padding around the grid */
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px;
+    padding: 40px;
 }
 
 .image-container {
@@ -124,13 +124,6 @@ nav {
     color: white;
     padding: 5px;
     font-size: 12px;
-}
-
-footer {
-    background-color: #333;
-    color: white;
-    padding: 20px;
-    text-align: center;
 }
 
 .contact-section {
@@ -181,8 +174,8 @@ footer {
     }
 
     .image-grid {
-        grid-template-columns: 1fr; /* One column */
-        gap: 20px; /* Adjust the gap for smaller screens */
-        padding: 20px; /* Adjust the padding for smaller screens */
+        grid-template-columns: 1fr;
+        gap: 20px;
+        padding: 20px;
     }
 }

@@ -1,9 +1,4 @@
 /* General Styles */
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-}
 
 body {
     font-family: Arial, sans-serif;
@@ -17,29 +12,50 @@ body {
     flex-wrap: wrap;
     justify-content: space-between;
     padding: 20px;
-    background-color: #fff;
+    /* background-color: #fff; */
     margin: 20px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    position: relative; /* Ensure relative positioning for overlay */
 }
 
-.overlay-text {
+/* Image Container */
+.image-containerc {
+    width: 100%;
+    overflow: hidden;
+    height: 550px; /* Adjusted height */
+}
+
+.image-containerc img {
+    width: 100%;
+    height: 100%; /* Ensure the image fills the container */
+    object-fit: cover; /* Ensure the image covers the container */
+    display: block;
+}
+
+.overlay-textc {
     position: absolute;
-    bottom: 10px; /* Adjust as per your preference */
-    left: 10px; /* Place the text at the bottom right corner */
-    transform: translateX(0); /* No need to translate horizontally */
+    bottom: 250px; /* Adjust as per your preference */
+    left: 20px; /* Adjust as per your preference */
     color: white; /* Text color */
+    font-size: 24px; /* Font size */
+    font-weight: bold; /* Font weight */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Text shadow for better readability */
+    z-index: 10; /* Ensure text is above image */
+    /* background-color: rgba(0, 0, 0, 0.5); Semi-transparent background */
     padding: 10px 20px; /* Padding around text */
-    font-size: 30px; /* Font size */
-    font-family: 'Cedarville Cursive', cursive; /* Stylish font */
+    border-radius: 5px; /* Rounded corners */
 }
 
 /* Contact Information Section */
-.contact-infop {
+.contact-infoc {
     flex: 1;
     background-color: #f0f0f0;
     padding: 20px;
     margin-bottom: 20px;
     border-radius: 5px;
+    height: 450px; /* Fixed height for alignment */
+    overflow-y: auto; /* Enable scrolling if content exceeds height */
+    box-sizing: border-box; /* Ensure padding is included in height calculation */
 }
 
 .contact-detail {
@@ -57,7 +73,9 @@ body {
 /* Map Section */
 .map-container {
     flex: 1;
-    margin-bottom: 20px;
+    margin-left: 20px; /* Add spacing between contact info and map */
+    height: 450px; /* Fixed height for alignment */
+    overflow: hidden; /* Hide overflow to prevent scroll bars */
 }
 
 .map {
@@ -75,53 +93,42 @@ body {
     border: 0;
 }
 
-/* Contact Form Section */
-.contact-form {
-    max-width: 600px;
-    margin: 40px auto;
+/* Contact Section */
+.contact-section {
+    padding: 40px 0;
+    /* background-color: #f9f9f9; */
     text-align: center;
-    padding: 20px;
-    border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-.contact-form input,
-.contact-form textarea {
-    width: 100%;
-    padding: 15px;
-    margin: 10px 0;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    box-sizing: border-box;
+.contact-section .columns {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
 }
 
-.contact-form textarea {
-    resize: vertical; /* Allow vertical resizing of textarea */
+.contact-section .column {
+    flex: 1;
+    max-width: 400px;
+    text-align: left;
 }
 
-.contact-form button {
-    width: 100%;
-    padding: 12px 20px;
-    background-color: #d4a24c;
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
+.contact-section .spacer {
+    height: 20px;
+}
+
+.contact-section p {
+    margin: 0 0 10px;
 }
 
 /* Media Queries */
 @media (max-width: 768px) {
-    .contact-container {
-        flex-direction: column;
-    }
-
-    .contact-infop,
+    .contact-infoc,
     .map-container {
-        width: 100%; /* Full width on smaller screens */
-        margin-bottom: 20px;
+        flex: 1 1 100%; /* Stack vertically on smaller screens */
+        margin-left: 0; /* Adjust margin for smaller screens if necessary */
     }
 
-    .contact-form {
-        padding: 10px; /* Adjust padding for smaller screens */
+    .map-container {
+        margin-left: 0; /* Ensure no additional margin on smaller screens */
     }
 }

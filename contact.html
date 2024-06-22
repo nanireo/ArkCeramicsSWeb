@@ -9,12 +9,11 @@
     <link rel="stylesheet" href="contact.css">
     <link rel="stylesheet" href="Full body step & riser.css">
     <link rel="stylesheet" href="dropdown list.css">
-
+    <link rel="stylesheet" href="footer.css">
 
 
     <!-- Font Awesome CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-
 </head>
 
 <body>
@@ -69,35 +68,17 @@
         </nav>
     </header>
 
-    <div class="slideshow-container">
-
-        <div class="mySlides">
-            <div class="image-container">
-                <img src="\contact\contact.jpg" alt="Ceramic Image 2">
-                <div class="overlay-text"> <h2> Contact Us</h2></div>
-            </div>
+    <div class="image-containerc">
+        <img src="\contact\contact.jpg" alt="Ceramic Image">
+        <div class="overlay-textc">
+            <h2>Contact Us</h2>
         </div>
-        
-
-        <!-- <div class="mySlides fade">
-            <img src="pics/staircase-4.jpg" alt="Ceramic Image 3">
-        </div>
-        <div class="mySlides fade">
-            <img src="pics/staircase-5.jpg" alt="Ceramic Image 3">
-        </div>
-        <div class="mySlides fade">
-            <img src="pics/staircase-6.jpg" alt="Ceramic Image 3">
-        </div>
-        <div class="mySlides fade">
-            <img src="pics/staircase-7.jpg" alt="Ceramic Image 3">
-        </div> -->
     </div>
 
-
     <div class="contact-container">
-        <div class="contact-infop">
+        <div class="contact-infoc">
             <h1>Contact Info</h1>
-            <p>It would be great to hear from you! If you got any questions, please do not hesitate to send us a message. We are looking forward to hearing from you! We reply within 24 hours!</p>
+            <p>It would be great to hear from you! If you have any questions, please do not hesitate to send us a message. We are looking forward to hearing from you! We reply within 24 hours!</p>
 
             <div class="contact-detail">
                 <i class="fas fa-phone-alt icon"></i>
@@ -106,10 +87,13 @@
 
             <div class="contact-detail">
                 <i class="fas fa-map-marker-alt icon"></i>
-                <p>Address of Principal Place of Business
-                
-                    <br>  SURVEY NO: 82, PLOT NO: 21 A<br>
-                    JAGGAMMAGARIPETA, SAMALKOT<br>
+                <p>
+                    Address of Principal Place of Business
+                    <br>
+                    SURVEY NO: 82, PLOT NO: 21 A
+                    <br>
+                    JAGGAMMAGARIPETA, SAMALKOT
+                    <br>
                     East Godavari Andhra Pradesh, 533440
                 </p>
             </div>
@@ -118,30 +102,14 @@
                 <i class="fas fa-envelope icon"></i>
                 <p>Email: <a href="mailto:arkceramics@gmail.com">arkceramics@gmail.com</a></p>
             </div>
-        
         </div>
+
         <div class="map-container">
             <div class="map">
                 <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3798.073712844179!2d82.149601!3d17.0453892!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a35ef44b9b4b4d9%3A0x7c55b5b700af77a8!2s17%C2%B002'43.4%22N+82%C2%B009'07.8%22E!5e0!3m2!1sen!2sus!4v1624259314040!5m2!1sen!2sus" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
-
             </div>
         </div>
     </div>
-
- <!-- Your existing HTML structure -->
-    
-    <!-- <form class="contact-form" id="contactForm" action="submit.php" method="POST">
-        <h2>LET'S WORK TOGETHER</h2>
-    <h3>CONTACT US</h3>
-    <p>It would be great to hear from you! If you got any questions.</p>
-        <input type="text" name="name" placeholder="Name*" required>
-        <input type="email" name="email" placeholder="Email*" required>
-        <input type="tel" name="phone" placeholder="Phone*" required>
-        <textarea name="comment" placeholder="Comment*" required></textarea>
-        <button type="submit">SEND MESSAGE</button>
-    </form> -->
-    
-
 
     <footer>
         <div id="contact" class="contact-section">
@@ -160,8 +128,7 @@
             </div>
             <div class="spacer"></div>
         </div>
-
-
+    
         <div class="social-icons">
             <a href="https://wa.me/917799055050" target="_blank" rel="noopener noreferrer" class="social-icon" style="color: white; font-size: 24px; margin-right: 10px; text-decoration: none;">
                 <i class="fab fa-whatsapp"></i>
@@ -174,38 +141,14 @@
             </a>
         </div>
         <p style="font-size: 10px;">Powered By <a href="https://nreosoftwaresolutions.wordpress.com/" target="_blank" rel="noopener noreferrer" style="color: white; font-size: 10px;">N-Reo Software Solutions</a></p>
-
     </footer>
+    
 
     <script>
         // Toggle menu function
         function toggleMenu() {
             var navLinks = document.getElementById("navLinks");
             navLinks.classList.toggle("active");
-        }
-
-        // Slideshow script
-        var slideIndex = 0;
-        showSlides();
-
-        function showSlides() {
-            var i;
-            var slides = document.getElementsByClassName("mySlides");
-            for (i = 0; i < slides.length; i++) {
-                slides[i].style.display = "none";
-            }
-            slideIndex++;
-            if (slideIndex > slides.length) {
-                slideIndex = 1;
-            }
-            var currentSlide = slides[slideIndex - 1];
-            currentSlide.style.display = "block";
-            currentSlide.classList.add("next"); // add next class to current slide
-            setTimeout(function () {
-                currentSlide.classList.remove("next"); // remove next class after transition
-                currentSlide.classList.add("previous"); // add previous class to current slide
-            }, 3000); // wait for transition to complete
-            setTimeout(showSlides, 5000); // Change image every 2 seconds
         }
     </script>
 

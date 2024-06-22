@@ -126,13 +126,6 @@ nav {
     font-size: 12px;
 }
 
-footer {
-    background-color: #333;
-    color: white;
-    padding: 20px;
-    text-align: center;
-}
-
 .contact-section {
     display: flex;
     flex-direction: column;

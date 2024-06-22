@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ark Ceramics</title>
     <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="Full body step & riser.css">
     <link rel="stylesheet" href="dropdown list.css">
     <link rel="stylesheet" href="gallery Section.css">
     <link rel="stylesheet" href="footer.css">
@@ -27,44 +26,45 @@
                     <span class="bar"></span>
                     <span class="bar"></span>
                     <span class="bar"></span>
-                    <!-- <span class="cross-icon">&times;</span> -->
+                    <span class="cross-icon">&times;</span>
                 </div>
-                <ul class="nav-links" id="navLinks">
-                    <li><a href="/Home.html">HOME</a></li>
-                    <li><a href="/about.html">ABOUT US</a></li>
-                    <li class="dropdown">
-                        <a href="#COLLECTION">COLLECTION</a>
-                        <ul class="dropdown-content">
-                            <li class="dropdown-submenu">
-                                <a href="#4FEET">4 FEET STEP & RISER</a>
-                                <ul class="submenu-content">
-                                    <li><a href="/Full body step & riser.html">FULL BODY STEP & RISER</a></li>
-                                    <li><a href="/Pixel Series Step & Riser.html">PIXEL STEP & RISER</a></li>
-                                    <li><a href="/GVT Step & Riser.html">GVT STEP & RISER</a></li>
-                                </ul>
-                            </li>
-                            <li class="dropdown-submenu">
-                                <a href="#3.25FEET">3.25 FEET STEP & RISER</a>
-                                <ul class="submenu-content">
-                                    <li><a href="/GVT Step & Riser2.html">GVT STEP & RISER</a></li>
-                                </ul>
-                            </li>
-                            <li class="dropdown-submenu">
-                                <a href="#3FEET">3 FEET STEP & RISER</a>
-                                <ul class="submenu-content">
-                                    <li><a href="GVT Step & Riser3.html">GVT STEP & RISER</a></li>
-                                    <li><a href="Full body step & riser4.html">FULL BODY STEP & RISER</a></li>
-                                    <li><a href="Volvo Step & Riser.html">VOLVO STEP & RISER</a></li>
-                                </ul>
-                            </li>
-                        </ul>
-                    </li>
-                    <li><a href="/packing-detail.html">PACKING DETAIL</a></li>
-                    <li><a href="/contact.html">CONTACT US</a></li>
-                </ul>
             </div>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="/Home.html">HOME</a></li>
+                <li><a href="/about.html">ABOUT US</a></li>
+                <li class="dropdown">
+                    <a href="#COLLECTION">COLLECTION</a>
+                    <ul class="dropdown-content">
+                        <li class="dropdown-submenu">
+                            <a href="#4FEET">4 FEET STEP & RISER</a>
+                            <ul class="submenu-content">
+                                <li><a href="/Full body step & riser.html">FULL BODY STEP & RISER</a></li>
+                                <li><a href="/Pixel Series Step & Riser.html">PIXEL STEP & RISER</a></li>
+                                <li><a href="/GVT Step & Riser.html">GVT STEP & RISER</a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown-submenu">
+                            <a href="#3.25FEET">3.25 FEET STEP & RISER</a>
+                            <ul class="submenu-content">
+                                <li><a href="/GVT Step & Riser2.html">GVT STEP & RISER</a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown-submenu">
+                            <a href="#3FEET">3 FEET STEP & RISER</a>
+                            <ul class="submenu-content">
+                                <li><a href="GVT Step & Riser3.html">GVT STEP & RISER</a></li>
+                                <li><a href="Full body step & riser4.html">FULL BODY STEP & RISER</a></li>
+                                <li><a href="Volvo Step & Riser.html">VOLVO STEP & RISER</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li><a href="/packing-detail.html">PACKING DETAIL</a></li>
+                <li><a href="/contact.html">CONTACT US</a></li>
+            </ul>
         </nav>
     </header>
+    
 
     \Sliding pic\01.jpg
 <main>
@@ -207,13 +207,15 @@
 <script>
     // Toggle menu function
     function toggleMenu() {
-        var navLinks = document.getElementById("navLinks");
-        navLinks.classList.toggle("active");
-        var bars = document.querySelectorAll('.bar');
-        bars.forEach(bar => bar.classList.toggle('hidden'));
-        var crossIcon = document.querySelector('.cross-icon');
-        crossIcon.style.display = crossIcon.style.display === 'none' ? 'block' : 'none';
-    }
+    var navLinks = document.getElementById('navLinks');
+    var bars = document.querySelectorAll('.menu-icon .bar');
+    var crossIcon = document.querySelector('.menu-icon .cross-icon');
+
+    navLinks.classList.toggle('active');
+    bars.forEach(bar => bar.classList.toggle('active'));
+    crossIcon.classList.toggle('active');
+}
+
 
     var slideIndex = 0;
     showSlides();

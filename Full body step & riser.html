@@ -17,21 +17,22 @@
 </head>
 <body>
 
-<header>
-    <nav>
-        <div class="nav-container">
-            <div class="logo">
-                <img src="pics/Untitled-2.png" alt="Logo" class="logo-image">
-            </div>
-            <!-- Hamburger Menu Icon -->
-            <div class="menu-icon" onclick="toggleMenu()">
-                <span class="bar"></span>
-                <span class="bar"></span>
-                <span class="bar"></span>
-                <span class="cross-icon">&times;</span>
+    <header>
+        <nav>
+            <div class="nav-container">
+                <div class="logo">
+                    <img src="pics/Untitled-2.png" alt="Logo" class="logo-image">
+                </div>
+                <!-- Hamburger Menu Icon -->
+                <div class="menu-icon" onclick="toggleMenu()">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="cross-icon">&times;</span>
+                </div>
             </div>
             <ul class="nav-links" id="navLinks">
-                <li ><a href="/Home.html">HOME</a></li>
+                <li><a href="/Home.html">HOME</a></li>
                 <li><a href="/about.html">ABOUT US</a></li>
                 <li class="dropdown">
                     <a href="#COLLECTION">COLLECTION</a>
@@ -63,14 +64,24 @@
                 <li><a href="/packing-detail.html">PACKING DETAIL</a></li>
                 <li><a href="/contact.html">CONTACT US</a></li>
             </ul>
-        </div>
-    </nav>
-</header>
+        </nav>
+    </header>
+    
 
 <!-- <div id="HOME" class="slideshow-container">
     <div  class="mySlides" >
         <img src="\collection\04 (1).jpg" alt="Ceramic Image 2">
         <div class="overlay-text"><h2>FULL BODY STEP & RISER</h2></div>
+    </div>
+</div> -->
+
+
+<!-- <div class="new-container">
+    <div class="new-image">
+        <img src="\collection\04 (1).jpg" alt="Ceramic Image 2">
+        <div class="new-overlay-text">
+            <h2>FULL BODY STEP & RISER</h2>
+        </div>
     </div>
 </div> -->
 
@@ -83,6 +94,7 @@
         </div>
     </div>
 </div>
+
 
 <main>
     <div class="image-grid">
@@ -164,13 +176,14 @@
 
 <script>
     // Toggle menu function
-    function toggleMenu() {
-        var navLinks = document.getElementById("navLinks");
-        navLinks.classList.toggle("active");
-        var bars = document.querySelectorAll('.bar');
-        bars.forEach(bar => bar.classList.toggle('hidden'));
-        var crossIcon = document.querySelector('.cross-icon');
-        crossIcon.style.display = crossIcon.style.display === 'none' ? 'block' : 'none';
+        function toggleMenu() {
+        var navLinks = document.getElementById('navLinks');
+        var bars = document.querySelectorAll('.menu-icon .bar');
+        var crossIcon = document.querySelector('.menu-icon .cross-icon');
+
+        navLinks.classList.toggle('active');
+        bars.forEach(bar => bar.classList.toggle('active'));
+        crossIcon.classList.toggle('active');
     }
 
 </script>

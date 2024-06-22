@@ -9,23 +9,26 @@
     <link rel="stylesheet" href="dropdown list.css">
     <link rel="stylesheet" href="footer.css">
     <link rel="stylesheet" href="navbarandHeader.css">
+    <link rel="stylesheet" href="new-image.css">
+
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 </head>
 <body>
 
-<header>
-    <nav>
-        <div class="nav-container">
-            <div class="logo">
-                <img src="pics/Untitled-2.png" alt="Logo" class="logo-image">
-            </div>
-            <!-- Hamburger Menu Icon -->
-            <div class="menu-icon" onclick="toggleMenu()">
-                <span class="bar"></span>
-                <span class="bar"></span>
-                <span class="bar"></span>
-                <span class="cross-icon">&times;</span>
+    <header>
+        <nav>
+            <div class="nav-container">
+                <div class="logo">
+                    <img src="pics/Untitled-2.png" alt="Logo" class="logo-image">
+                </div>
+                <!-- Hamburger Menu Icon -->
+                <div class="menu-icon" onclick="toggleMenu()">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="cross-icon">&times;</span>
+                </div>
             </div>
             <ul class="nav-links" id="navLinks">
                 <li><a href="/Home.html">HOME</a></li>
@@ -38,7 +41,7 @@
                             <ul class="submenu-content">
                                 <li><a href="/Full body step & riser.html">FULL BODY STEP & RISER</a></li>
                                 <li><a href="/Pixel Series Step & Riser.html">PIXEL STEP & RISER</a></li>
-                                <li><a href="#">GVT STEP & RISER</a></li>
+                                <li><a href="/GVT Step & Riser.html">GVT STEP & RISER</a></li>
                             </ul>
                         </li>
                         <li class="dropdown-submenu">
@@ -60,14 +63,22 @@
                 <li><a href="/packing-detail.html">PACKING DETAIL</a></li>
                 <li><a href="/contact.html">CONTACT US</a></li>
             </ul>
-        </div>
-    </nav>
-</header>
+        </nav>
+    </header>
 
-<div id="HOME" class="slideshow-container">
+<!-- <div id="HOME" class="slideshow-container">
     <div  class="mySlides">
         <img src="\collection\04 (1).jpg" alt="Ceramic Image 2">
         <div class="overlay-text"><h2>FULL BODY STEP & RISER</h2></div>
+    </div>
+</div> -->
+
+<div class="new-container">
+    <div class="new-image">
+        <img src="\collection\04 (1).jpg" alt="Ceramic Image 2">
+        <div class="new-overlay-text">
+            <h2>GVT STEP & RISER</h2>
+        </div>
     </div>
 </div>
 
@@ -156,36 +167,16 @@
 <script>
     // Toggle menu function
     function toggleMenu() {
-        var navLinks = document.getElementById("navLinks");
-        navLinks.classList.toggle("active");
-        var bars = document.querySelectorAll('.bar');
-        bars.forEach(bar => bar.classList.toggle('hidden'));
-        var crossIcon = document.querySelector('.cross-icon');
-        crossIcon.style.display = crossIcon.style.display === 'none' ? 'block' : 'none';
-    }
+        var navLinks = document.getElementById('navLinks');
+        var bars = document.querySelectorAll('.menu-icon .bar');
+        var crossIcon = document.querySelector('.menu-icon .cross-icon');
 
-    var slideIndex = 0;
-    showSlides();
-
-    function showSlides() {
-        var i;
-        var slides = document.getElementsByClassName("mySlides");
-        for (i = 0; i < slides.length; i++) {
-            slides[i].style.display = "none";
-        }
-        slideIndex++;
-        if (slideIndex > slides.length) {
-            slideIndex = 1;
-        }
-        var currentSlide = slides[slideIndex - 1];
-        currentSlide.style.display = "block";
-        currentSlide.classList.add("next"); // add next class to current slide
-        setTimeout(function() {
-            currentSlide.classList.remove("next"); // remove next class after transition
-            currentSlide.classList.add("previous"); // add previous class to current slide
-        }, 3000); // wait for transition to complete
-        setTimeout(showSlides, 5000); // Change image every 5 seconds
+        navLinks.classList.toggle('active');
+        bars.forEach(bar => bar.classList.toggle('active'));
+        crossIcon.classList.toggle('active');
     }
+   
+     
 
 
 </script>

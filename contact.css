@@ -1,5 +1,4 @@
 /* General Styles */
-
 body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
@@ -12,38 +11,9 @@ body {
     flex-wrap: wrap;
     justify-content: space-between;
     padding: 20px;
-    /* background-color: #fff; */
     margin: 20px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     position: relative; /* Ensure relative positioning for overlay */
-}
-
-/* Image Container */
-.image-containerc {
-    width: 100%;
-    overflow: hidden;
-    height: 550px; /* Adjusted height */
-}
-
-.image-containerc img {
-    width: 100%;
-    height: 100%; /* Ensure the image fills the container */
-    object-fit: cover; /* Ensure the image covers the container */
-    display: block;
-}
-
-.overlay-textc {
-    position: absolute;
-    bottom: 250px; /* Adjust as per your preference */
-    left: 20px; /* Adjust as per your preference */
-    color: white; /* Text color */
-    font-size: 24px; /* Font size */
-    font-weight: bold; /* Font weight */
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Text shadow for better readability */
-    z-index: 10; /* Ensure text is above image */
-    /* background-color: rgba(0, 0, 0, 0.5); Semi-transparent background */
-    padding: 10px 20px; /* Padding around text */
-    border-radius: 5px; /* Rounded corners */
 }
 
 /* Contact Information Section */
@@ -96,7 +66,6 @@ body {
 /* Contact Section */
 .contact-section {
     padding: 40px 0;
-    /* background-color: #f9f9f9; */
     text-align: center;
 }
 

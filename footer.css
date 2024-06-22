@@ -58,7 +58,7 @@ footer .social-icons a:hover {
         margin-bottom: 1rem; /* Add spacing between columns */
     }
 
-    footer .social-icons {
-        margin-top: 1rem;
+    footer .contact-section {
+        padding: 10px; /* Adjust padding for mobile */
     }
 }

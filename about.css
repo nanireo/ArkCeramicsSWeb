@@ -12,6 +12,7 @@ header {
     text-align: center;
 }
 
+/* Styles for Image Container */
 .imacontainer {
     position: relative;
     width: 100%;
@@ -56,6 +57,8 @@ header {
 .overlay-text h2 {
     margin: 0;
 }
+
+/* Additional CSS for other sections */
 
 .intro, .mission-vision-values {
     padding: 2rem;

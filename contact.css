@@ -63,30 +63,62 @@ body {
     border: 0;
 }
 
-/* Contact Section */
-.contact-sectionPage {
-    padding: 40px 0;
+/* Contact Form Section */
+.contact-form-container {
+    padding: 20px;
+    margin: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+}
+
+.contact-form-container h1 {
+    margin-bottom: 20px;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-form label {
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.contact-form input,
+.contact-form textarea {
+    margin-bottom: 15px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.contact-form button {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #007bff;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.contact-form button:hover {
+    background-color: #0056b3;
+}
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
     text-align: center;
 }
 
-.contact-sectionPage .columns {
-    display: flex;
-    justify-content: center;
-    gap: 40px;
-}
-
-.contact-sectionPage .column {
-    flex: 1;
-    max-width: 400px;
-    text-align: left;
-}
-
-.contact-sectionPage .spacer {
-    height: 20px;
-}
-
-.contact-sectionPage p {
-    margin: 0 0 10px;
+footer a {
+    color: #fff;
+    text-decoration: none;
 }
 
 /* Media Queries */

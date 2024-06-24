@@ -5,18 +5,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ark Ceramics</title>
-    <!-- <link rel="stylesheet" href="styles.css"> -->
     <link rel="stylesheet" href="contact.css">
-    <!-- <link rel="stylesheet" href="Full body step & riser.css"> -->
-    <!-- <link rel="stylesheet" href="dropdown list.css"> -->
     <link rel="stylesheet" href="footer.css">
     <link rel="stylesheet" href="new-image.css">
     <link rel="stylesheet" href="navbarandHeader.css">
-
     <link rel="stylesheet" href="Volvo Step & Riser.css">
-
-
-    <!-- Font Awesome CSS -->
+    <link rel="stylesheet" href="contact-form.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 </head>
 
@@ -28,7 +22,6 @@
                 <div class="logo">
                     <img src="pics/Untitled-2.png" alt="Logo" class="logo-image">
                 </div>
-                <!-- Hamburger Menu Icon -->
                 <div class="menu-icon" onclick="toggleMenu()">
                     <span class="bar"></span>
                     <span class="bar"></span>
@@ -89,7 +82,6 @@
             <div class="contact-detail">
                 <i class="fas fa-phone-alt icon"></i>
                 <p>Phone: <a href="tel:+917799055050">+91 7799055050</a></p>
-
             </div>
 
             <button style="background-color: #007bff; color: #fff; border: none; padding: 10px 20px; cursor: pointer; text-decoration: none; border-radius: 5px; transition: background-color 0.3s;">
@@ -104,7 +96,6 @@
             <a href="https://facebook.com/arkceramics" target="_blank" rel="noopener noreferrer" class="social-icon" style="color: #1877F2; font-size: 24px; text-decoration: none;">
                 <i class="fab fa-facebook-f"></i>
             </a>
-            
             
             <div class="contact-detail">
                 <i class="fas fa-map-marker-alt icon"></i>
@@ -127,6 +118,25 @@
         </div>
     </div>
 
+    <div class="contact-form-container">
+        <h1>Contact Form</h1>
+        <form action="/submit-contact-form" method="post" class="contact-form">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="phone">Phone Number:</label>
+            <input type="tel" id="phone" name="phone" required>
+
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" rows="4" required></textarea>
+
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+
     <footer>
         <div id="contact" class="contact-section">
             <div class="spacer"></div>
@@ -143,8 +153,6 @@
                         <a href="https://facebook.com/arkceramics" target="_blank" rel="noopener noreferrer" class="social-icon" style="color: #1877F2; font-size: 24px; text-decoration: none;">
                             <i class="fab fa-facebook-f"></i>
                         </a>
-                    
-                    
                 </div>
                 <div class="column address-column">
                     <p>Address of Principal Place of Business</p>
@@ -155,23 +163,19 @@
             </div>
             <div class="spacer"></div>
         </div>
-    
-        
         <p style="font-size: 10px;">Powered By <a href="https://nreosoftwaresolutions.wordpress.com/" target="_blank" rel="noopener noreferrer" style="color: white; font-size: 10px;">N-Reo Software Solutions</a></p>
     </footer>
 
     <script>
-        // Toggle menu function
         function toggleMenu() {
-        var navLinks = document.getElementById('navLinks');
-        var bars = document.querySelectorAll('.menu-icon .bar');
-        var crossIcon = document.querySelector('.menu-icon .cross-icon');
+            var navLinks = document.getElementById('navLinks');
+            var bars = document.querySelectorAll('.menu-icon .bar');
+            var crossIcon = document.querySelector('.menu-icon .cross-icon');
 
-        navLinks.classList.toggle('active');
-        bars.forEach(bar => bar.classList.toggle('active'));
-        crossIcon.classList.toggle('active');
-    }
-
+            navLinks.classList.toggle('active');
+            bars.forEach(bar => bar.classList.toggle('active'));
+            crossIcon.classList.toggle('active');
+        }
     </script>
 
 </body>

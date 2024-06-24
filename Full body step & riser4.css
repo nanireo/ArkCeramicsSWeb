@@ -24,6 +24,7 @@ body {
     display: block;
     transition: transform 0.3s ease-in-out;
 }
+
 .overlay-text {
     position: absolute;
     bottom: 0;
@@ -87,26 +88,6 @@ body {
 }
 
 @media (max-width: 768px) {
-    .nav-links {
-        display: none;
-        flex-direction: column;
-        width: 100%;
-        background-color: #333;
-    }
-
-    .nav-links.active {
-        display: flex;
-    }
-
-    .menu-icon {
-        display: block;
-    }
-
-    .dropdown-content, .submenu-content {
-        position: static;
-        box-shadow: none;
-    }
-
     .image-grid {
         grid-template-columns: 1fr; /* One column */
         gap: 20px; /* Adjust the gap for smaller screens */

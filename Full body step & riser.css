@@ -48,14 +48,19 @@ body {
     transform: scale(1.1);
 }
 
-.image-name {
+.overlay-text {
     position: absolute;
-    bottom: 5px;
-    left: 5px;
-    background-color: rgba(0, 0, 0, 0.5);
+    bottom: 0px;
+    left: 0px;
+    width: 100%;
+    text-align: center;
+    background-color: rgba(254, 102, 53); /* Semi-transparent background */
     color: white;
-    padding: 5px;
-    font-size: 12px;
+    text-align: center;
+    padding: 10px;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+    font-size: 20px; /* Increase the text size */
 }
 
 .spacer {

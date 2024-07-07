@@ -3,7 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Display Image and Redirect</title>
+    <meta name="description" content="Discover ARK Ceramics, the leading manufacturer of Vitrified Step & Riser tiles with over 100+ designs. Enhance your home with our high-quality, stylish, and durable tiles available in various sizes.">
+    <meta name="keywords" content="ARK Ceramics, Vitrified Step & Riser, tiles, step tiles, riser tiles, home decor, tile manufacturer, durable tiles, stylish tiles, tile designs">
+    <title>ARK Ceramics - Premium Vitrified Step & Riser Manufacturer</title>
     <style>
         body {
             margin: 0;
@@ -12,18 +14,23 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            height: 100vh;
-            background-color: #f0f0f0;
+            height: 100vh; /* Use full viewport height */
+            background-color: #000000;
             overflow: hidden; /* Prevents scrolling */
         }
 
-        img {
-            position: fixed; /* Fixed position for fullscreen */
-            top: 0;
-            left: 0;
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
             width: 100%;
             height: 100%;
-            object-fit: cover;
+        }
+
+        img {
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: contain; /* Maintain aspect ratio without cutting the image */
             opacity: 0; /* Initially hidden */
             transition: opacity 1s ease-in-out; /* Smooth transition */
         }
@@ -34,11 +41,10 @@
 
         @media (max-width: 768px) {
             img {
-                position: absolute; /* Adjust position for smaller screens */
                 width: auto;
-                height: 100%;
-                max-width: 100%;
-                max-height: 100%;
+                height: auto;
+                max-width: 90%;
+                max-height: 90%;
             }
         }
     </style>
@@ -46,7 +52,9 @@
 <body>
 
 <!-- Displaying the image -->
-<img id="bgImage" src="/pics/IMG_5566.PNG" alt="Ark Ceramics Image">
+<div class="container">
+    <img id="bgImage" src="" alt="ARK Ceramics Logo" class="logo-image">
+</div>
 
 <!-- JavaScript to load image and redirect after a delay -->
 <script>
@@ -65,7 +73,7 @@
             }, 1000); // Adjust the delay time (1000 = 1 second)
         }, 2000); // Adjust the delay time for fade-out (2000 = 2 seconds)
     };
-    img.src = '/pics/IMG_5566.PNG';
+    img.src = 'pics/IMG_5561.PNG'; // Correct image path
 </script>
 
 </body>

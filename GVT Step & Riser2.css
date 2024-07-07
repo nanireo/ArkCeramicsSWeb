@@ -29,14 +29,22 @@ body {
     transform: scale(1.1);
 }
 
-.image-name {
+.overlay-text {
     position: absolute;
-    bottom: 5px;
-    left: 5px;
-    background-color: rgba(0, 0, 0, 0.5);
+    bottom: 0px;
+    left: 0px;
+    width: 100%;
+    text-align: center;
+    background-color: rgba(254, 102, 53); /* Semi-transparent background */
     color: white;
-    padding: 5px;
-    font-size: 12px;
+    padding: 10px;
+    font-size: 20px; /* Larger text size */
+    opacity: 0; /* Initially hidden */
+    transition: opacity 0.3s ease; /* Smooth transition */
+}
+
+.image-container:hover .overlay-text {
+    opacity: 1; /* Show text on hover */
 }
 
 @media (max-width: 768px) {

@@ -27,13 +27,14 @@ body {
 
 .overlay-text {
     position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    bottom: 0px;
+    left: 0px;
+    width: 100%;
+    text-align: center;
+    background-color: rgba(254, 102, 53); /* Semi-transparent background */
     color: white;
     padding: 10px;
-    font-size: 14px;
+    font-size: 20px; /* Larger text size */
     transform: translateY(100%); /* Initially hidden */
     transition: transform 0.3s ease; /* Smooth transition */
 }

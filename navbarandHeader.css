@@ -41,14 +41,14 @@ nav {
     display: block;
     width: 25px;
     height: 3px;
-    background-color: rgb(255, 208, 0);
+    background-color: rgb(95, 177, 152);
     margin: 5px 10px;
 }
 
 .menu-icon .cross-icon {
     display: none;
     font-size: 34px;
-    color: rgb(255, 208, 0);;
+    color: rgb(95, 177, 152);
     margin: 5px 10px;
 
 }

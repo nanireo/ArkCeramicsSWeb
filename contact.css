@@ -5,6 +5,52 @@ body {
     background-color: #f8f8f8;
 }
 
+
+/* branch-info */
+.branch-info {
+    display: flex;
+    justify-content: space-between; /* Ensure branches are spaced evenly */
+    gap: 20px;
+    margin-top: 20px;
+    flex-wrap: wrap; /* Allow wrapping to new lines */
+}
+
+.branch {
+    flex: 1 1 calc(33.333% - 20px); /* Each branch takes 1/3 of the container width minus the gap */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    background-color: #f9f9f9;
+}
+
+.branch-icon {
+    color: #007bff;
+    font-size: 24px;
+    margin-right: 15px;
+}
+
+@media (max-width: 768px) {
+    .branch {
+        flex: 1 1 calc(50% - 20px); /* Each branch takes 50% of the container width minus the gap on smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .branch {
+        flex: 1 1 100%; /* Each branch takes 100% of the container width on the smallest screens */
+    }
+}
+
+@media (min-width: 769px) {
+    .branch-info > .branch:nth-child(3) {
+        flex: 1 1 100%; /* Make the third branch take the full width */
+        display: flex;
+        justify-content: center; /* Center the content */
+    }
+}
+
 /* Contact Container */
 .contact-container {
     display: flex;
@@ -15,6 +61,24 @@ body {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     position: relative; /* Ensure relative positioning for overlay */
 }
+
+h3 {
+    margin-top: 0; /* Adjust margin as needed */
+    text-align: center; /* Center align the heading */
+}
+
+
+/* Contact Container */
+.contact-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 20px;
+    margin: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    position: relative; /* Ensure relative positioning for overlay */
+}
+
 
 /* Contact Information Section */
 .contact-infoc {
